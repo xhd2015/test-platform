@@ -1,0 +1,77 @@
+<html style="height: 100%">
+<head>
+    <title>Test Platform Documentation - Ad Tools</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../.././css/base.css"/></link>
+    <!-- production version, optimized for size and speed -->
+    <script src="../../js/common/vue2.js"></script>
+    <script src="../../js/util/DocumentUtils.js"></script>
+    <script src="../../js/util/RequestUtils.js"></script>
+</head>
+<body style="min-height: 100%;margin-top: 0;margin-bottom: 0; display: flex;flex-direction: column">
+<div id="app">
+    <h1>Fundamental HTML Structure</h1>
+    <textarea class="pre" id="basicHTMLElement" style="width: 600px;height: 700px">
+    </textarea>
+</pre>
+    </p>
+</div>
+
+<div style="display: flex;flex-direction: column;align-items: center;justify-content:flex-end;flex-grow: 1">
+    <footer id="footer">
+        <p style="">Designed by Fulton Shaw</p>
+    </footer>
+</div>
+</body>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data:{
+
+        }
+    })
+</script>
+
+<script>
+    var basicHTML = `
+<html style="height: 100%">
+<head>
+    <title>Test Platform - Index</title>
+    <meta charset="UTF-8">
+            <script src="../../js/common/vue2.js"><\/script>
+    <script src="../../js/util/DocumentUtils.js"><\/script>
+    <script src="../../js/util/RequestUtils.js"><\/script>
+</head>
+<body style="min-height: 100%;margin-top: 0;margin-bottom: 0; display: flex;flex-direction: column">
+<div id="app">
+    <h1>Index</h1>
+    <ul>
+        <li><a href="ad-tools-doc.html">Ad Tools</a></li>
+        <li><a href="json-tools.html">JSON Tools</a></li>
+        <li><a href="basic-tools.html">Basic Tools</a></li>
+    </ul>
+</div>
+
+<div style="display: flex;flex-direction: column;align-items: center;justify-content:flex-end;flex-grow: 1">
+    <footer id="footer">
+        <p style="">Designed by Fulton Shaw</p>
+    </footer>
+</div>
+</body>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data:{
+
+        }
+    })
+
+
+<\/script>
+
+</html>
+`
+    document.getElementById("basicHTMLElement").value = basicHTML
+</script>
+
+</html>

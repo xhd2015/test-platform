@@ -1,0 +1,230 @@
+<html>
+
+<head>
+    <title>Test Platform - General Request Maker</title>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/textarea.css"/>
+    </link>
+    <!-- production version, optimized for size and speed -->
+    <script src="../../js/common/vue2.js"></script>
+    <script src="../../js/common/axios.min.js"></script>
+    <script src="../../js/common/httpVueLoader.js"></script>
+    <script src="../../js/util/FileUtils.js"></script>
+    <script src="../../js/util/RequestUtils.js"></script>
+    <script src="../../js/util/DocumentUtils.js"></script>
+    <script src="../../js/util/StringUtils.js"></script>
+    <script src="../../js/common/lodash4.13.1.min.js"></script>
+    <script src="../../js/util/JsonUtils.js"></script>
+    <script src="../../js/AdTypes.js"></script>
+
+
+</head>
+
+<body>
+<div id="app">
+    <label>Test Toggle</label>
+    <toggle @change="console.log('change')" :options="['option A','option          SD    B']"></toggle>
+    <toggle @change="console.log('change')" :options="['option D','option C']"></toggle>
+    <toggle @change="console.log('change')" :options="[]"></toggle>
+    <br/>
+    <h1>Test Typed JSON</h1>
+    <h3>Boolean Test:</h3>
+    <typed-json-form ref="booleanTestToggle" type="BooleanType" value="Hello" true-option="Hello" false-option="Hancode"
+                     show-style="toggle"></typed-json-form>
+
+    <typed-json-form ref="booleanTestCheckbox" type="BooleanType" value="Hello" true-option="Hello"
+                     false-option="Hancode" show-style="checkbox" label="choose"
+                     @input="console.log($event)"></typed-json-form>
+
+    <typed-json-form ref="booleanTestSelect" type="BooleanType" value="Hello" true-option="Hello" false-option="Hancode"
+                     show-style="select"></typed-json-form>
+
+    <h3>Number Test:</h3>
+    <typed-json-form ref="numberTest" type="NumberType" value="" show-style="input" placeholder="some integer"
+                     @input="console.log($event)"></typed-json-form>
+    <typed-json-form ref="numberTestTextArea" type="NumberType" value="1" show-style="textarea"
+                     placeholder="some integer"></typed-json-form>
+
+    <h3>String Test:</h3>
+    <typed-json-form ref="stringTest" type="StringType" value="" show-style="input" placeholder="some text"
+                     @input="console.log($event)"></typed-json-form>
+    <typed-json-form ref="stringTestTextArea" type="StringType" value="1" show-style="textarea"
+                     placeholder="some text"></typed-json-form>
+
+
+    <h3>Enum Test:</h3>
+    <typed-json-form ref="enumTest" type="EnumType"
+                     :options="[{text:'HashCode',value:'hc'},{text:'HandCode',value:'hhc'},{text:'HandBash',value:'hb'}]"
+                     value="hhc" show-style="toggle" @input="console.log($event)"></typed-json-form>
+
+    <typed-json-form ref="enumTestSelect" type="EnumType"
+                     :options="[{text:'HashCode',value:'hc'},{text:'HandCode',value:'hhc'},{text:'HandBash',value:'hb'}]"
+                     value="hhc" show-style="select" @input="console.log($event)" label="SELECT:"></typed-json-form>
+
+    <h3>Array Test:</h3>
+    <typed-json-form ref="arrayTest" type="ArrayType" element-type="NumberType" :value="[1,2,3]"
+                     @input="console.log($event)" label="Array:"></typed-json-form>
+
+
+    <h3>Map Test:</h3>
+    <typed-json-form ref="mapTest" type="MapType" key-type="StringType" element-type="NumberType" :value="{'A':1,'B':2}"
+                     @input="console.log($event)" label="Map<String,Number>:"></typed-json-form>
+    <br/>
+
+    <typed-json-form ref="objectTest" type="MapType" key-type="StringType" element-type="StringType" :value="{'a':'b'}"
+                     @input="console.log($event)" label="Map<String,String>:"></typed-json-form>
+    <br/>
+
+    <typed-json-form ref="objectTest" type="MapType" key-type="StringType"
+                     :element-type="{type:'ArrayType',elementType:'NumberType'}" :value="null"
+                     @input="console.log($event)" label="Map<String,List<Number>>:"></typed-json-form>
+
+
+    <h3>Object Test:</h3>
+    <typed-json-form ref="objectTest" type="ObjectType"
+                     :type-map="{a:{label:'HaHa:',type:'StringType'},b:{label:'BB:',type:'NumberType',placeholder:'Input something'},c:{type:'ArrayType',label:'CC:'},d:{type:'BooleanType',trueOption:'Muse',falseOption:'Mose',showStyle:'toggle',label:'DD:'}}"
+                     :value="{a:'I were a String',b:'',c:[1,2,3],d:'Muse'}"
+                     @input="console.log($event)" label="Object:"></typed-json-form>
+
+
+    <h1>Test JSON Form</h1>
+    <json-form title="JSON Form:" :value="{a:'123',b:'456',d:'789'}" ref="jsonFormTest"
+               type="ObjectType"
+               :type-map="{a:{type:'StringType',label:'A:'},b:{type:'StringType',label:'B:'},c:{type:'StringType',label:'C:'}}"
+               @input="console.log($event)"></json-form>
+
+
+    <h1>ClientInfo JSON Form</h1>
+    <json-form title="JSON Form:" :value="{}" ref="clientJson"
+               type="ObjectType"
+               :type-map="AdTypes.ClientInfoDTO" @input="console.log($event)"></json-form>
+
+
+    <h1>Position JSON Form</h1>
+    <json-form title="Position Form:" :value="{}" ref="positionJson"
+               type="ObjectType"
+               :type-map="AdTypes.PositionDTO" @input="logPosition($event)"></json-form>
+
+
+    <h1>Dislike Map </h1>
+    <json-form title="Dislike Map:" :value="{}" ref="dislikeMap"
+               type="ObjectType"
+               :type-map='{
+               dislikeItems:{
+            "type": "MapType",
+            "keyType": "StringType",
+            "elementType": {
+                "type": "ArrayType",
+                "elementType": "NumberType"
+            },
+            "label": "dislikeItems:",
+            "placeholder": "dislikeItems:"}}' @input="logDislike($event)"></json-form>
+
+
+    <h1>Indented Map </h1>
+    <json-form title="Dislike Map:" :value="{}" ref="indentMap"
+               type="ObjectType"
+               :type-map='{
+               dislikeItems:{
+            "type": "MapType",
+            "keyType": "StringType",
+            "elementType": {
+                "type": "ArrayType",
+                "elementType": "NumberType"
+            },
+            "label": "dislikeItems:",
+            "placeholder": "dislikeItems:"}}' start-element="&nbsp;&nbsp;&nbsp;&nbsp;" end-element="<br/>"></json-form>
+
+    <h1>Indented Object</h1>
+    <json-form title="JSON Form:" :value="{}" ref="indentedObject"
+               type="ObjectType"
+               :type-map='{"location": {
+            "type": "StringType",
+            "label": "location:",
+            "placeholder": "location:"
+        },
+        "androidId": {
+            "type": "StringType",
+            "label": "androidId:",
+            "placeholder": "androidId:"
+        },
+        "clientPackage": {
+            "type": "StringType",
+            "label": "clientPackage:",
+            "placeholder": "clientPackage:"
+        },
+        "feedsFrom": {
+            "type": "StringType",
+            "label": "feedsFrom:",
+            "placeholder": "feedsFrom:"
+        },
+        "batteryLevel": {
+            "type": "NumberType",
+            "label": "batteryLevel:",
+            "placeholder": "batteryLevel:"
+        },
+        "annotherObject":{
+           "type":"ObjectType",
+           "typeMap":{
+               "id":{
+                  "type":"StringType",
+                  "label":"ID:"
+               },
+               "name":{
+                  "type":"ArrayType",
+                  "elementType":"StringType",
+                  "label":"Name:"
+               }
+           },
+           "label":"Another Object:"
+        },
+        "mapObject":{
+           "label":"Map Object:",
+          "type":"MapType",
+          "keyType":"StringType",
+          "elementType":{
+             "type":"ArrayType",
+             "elementType":{
+                "type":"ObjectType",
+                "typeMap":{
+                   "key":{
+                      "type":"NumberType"
+                   }
+                }
+             }
+          }
+        }
+        }' start-element="&nbsp;&nbsp;&nbsp;&nbsp;" end-element="<br/>"></json-form>
+
+    <h1>Array of Object</h1>
+    <json-form title="Array of Object:" :value="[]" ref="arrayObject"
+               type="ArrayType"
+               :element-type="{type:'ObjectType',typeMap:{ id:{type:'StringType',label:'id'},name:{type:'StringType',label:'name'}}}"
+               start-element="&nbsp;&nbsp;&nbsp;&nbsp;" end-element="<br/>"></json-form>
+</div>
+
+</body>
+<script>
+    var app = new Vue({
+        el: '#app',
+        components: {
+            'toggle': httpVueLoader('../../vue/common/Toggle.vue'),
+            'typed-json-form': httpVueLoader('../../vue/common/TypedJsonForm.vue'),
+            'json-form': httpVueLoader('../../vue/common/JsonForm.vue')
+        },
+        data: {},
+        methods: {
+            logPosition(data) {
+                console.log(data)
+            },
+
+            logDislike(data) {
+                console.log(data)
+            }
+        }
+    })
+
+</script>
+
+</html>

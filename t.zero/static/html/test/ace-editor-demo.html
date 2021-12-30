@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Platform - ACE Editor Demo</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+
+    <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+
+
+    <!-- production version, optimized for size and speed -->
+    <script src="../../js/common/vue2.js"></script>
+    <script src="../../js/common/axios.min.js"></script>
+    <script src="../../js/common/httpVueLoader.js"></script>
+    <script src="../../js/util/FileUtils.js"></script>
+    <script src="../../js/util/RequestUtils.js"></script>
+    <script src="../../js/util/DocumentUtils.js"></script>
+    <script src="../../js/util/StringUtils.js"></script>
+    <script src="../../js/common/lodash4.13.1.min.js"></script>
+    <script src="../../js/util/JsonUtils.js"></script>
+    <script src="../../js/AdTypes.js"></script>
+
+    <script src="../../ace-editor-builds/src-noconflict/ace.js" type="text/javascript"
+            charset="utf-8"></script>
+
+</head>
+
+<body>
+
+
+<div id="app">
+    <h1>ACE Editor Sample</h1>
+
+    <div id="editor">function foo(items) {
+        var x = "All this is syntax highlighted";
+        return x;
+        }
+    </div>
+
+
+</div>
+
+
+<script>
+    var editor
+    var app = new Vue({
+        el: '#app',
+        components: {},
+        data: {},
+        methods: {},
+        mounted() {
+            // ace does not support auto completion
+            editor = ace.edit("editor");
+            // editor.setTheme("ace/theme/monokai");
+            editor.session.setMode("ace/mode/javascript");
+        }
+    })
+
+</script>
+</body>
+</html>

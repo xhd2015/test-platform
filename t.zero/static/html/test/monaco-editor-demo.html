@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Test Platform - Monaco Editor Demo</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+    <!--<link rel="stylesheet" href="../../css/textarea.css"/>-->
+    <!--</link>-->
+    <!---->
+    <link rel="stylesheet" data-name="vs/editor/editor.main" href="../../monaco-editor/node_modules/monaco-editor/dev/vs/editor/editor.main.css">
+    <!--<link rel="stylesheet" data-name="vs/editor/editor.main"-->
+          <!--href="../../monaco-editor/node_modules/monaco-editor/dev/vs/editor/editor.main.css"/>-->
+
+
+    <!-- production version, optimized for size and speed -->
+    <script src="../../js/common/vue2.js"></script>
+    <script src="../../js/common/axios.min.js"></script>
+    <script src="../../js/common/httpVueLoader.js"></script>
+    <script src="../../js/util/FileUtils.js"></script>
+    <script src="../../js/util/RequestUtils.js"></script>
+    <script src="../../js/util/DocumentUtils.js"></script>
+    <script src="../../js/util/StringUtils.js"></script>
+    <script src="../../js/common/lodash4.13.1.min.js"></script>
+    <script src="../../js/util/JsonUtils.js"></script>
+    <script src="../../js/AdTypes.js"></script>
+
+</head>
+
+<body>
+<script>var require = {paths: {'vs': '../../monaco-editor/node_modules/monaco-editor/min/vs'}};</script>
+<script src="../../monaco-editor/node_modules/monaco-editor/min/vs/loader.js"></script>
+<script src="../../monaco-editor/node_modules/monaco-editor/min/vs/editor/editor.main.nls.js"></script>
+<script src="../../monaco-editor/node_modules/monaco-editor/min/vs/editor/editor.main.js"></script>
+
+
+<div id="app">
+    <h1>Monaco Editor Sync Loading Sample</h1>
+    <div ref="container" style="width:800px;height:600px;border:1px solid grey"></div>
+</div>
+
+
+<script>
+    var editor
+    var app = new Vue({
+        el: '#app',
+        components: {
+        },
+        data: {},
+        methods: {
+            logPosition(data) {
+                console.log(data)
+            },
+
+            logDislike(data) {
+                console.log(data)
+            }
+        },
+        mounted() {
+            editor = monaco.editor.create(this.$refs.container, {
+                value: [
+                    'function x() {',
+                    '\tconsole.log("Hello world!");',
+                    '}'
+                ].join('\n'),
+                language: 'javascript'
+            });
+        }
+    })
+
+</script>
+</body>
+</html>

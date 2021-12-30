@@ -1,0 +1,4 @@
+sudo rm -rf /var/lib/test-platform/
+sudo mkdir -p /var/lib/test-platform/t.zero/
+sudo cp -R ./dist/ /var/lib/test-platform/t.zero/
+sudo chown -R nginx:nginx /var/lib/test-platform/

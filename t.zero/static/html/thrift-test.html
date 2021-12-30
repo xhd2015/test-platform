@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>Test Platform - Thrift Test</title>
+
+    <meta charset="UTF-8">
+    <script src="../js/common/vue2.js"></script>
+    <script src="../js/common/axios.min.js"></script>
+    <script src="../js/common/httpVueLoader.js"></script>
+    <script src="../js/util/FileUtils.js"></script>
+    <script src="../js/util/RequestUtils.js"></script>
+    <script src="../js/util/DocumentUtils.js"></script>
+    <script src="../js/util/ThriftWrapper.js"></script>
+    <!--thrift -->
+    <script src="../js/thrift.js"></script>
+    <script src="../js/thrift-js-binary-protocol.js"></script>
+    <script src="../js/thrift-gen/base_types.js"></script>
+    <script src="../js/thrift-gen/game_data_types.js"></script>
+    <script src="../js/thrift-gen/game_info_types.js"></script>
+    <script src="../js/thrift-gen/webcast_data_types.js"></script>
+    <script src="../js/thrift-gen/WebcastGameInfoService.js"></script>
+
+</head>
+
+<body style="min-height: 100%;margin-top: 0;margin-bottom: 0; display: flex;flex-direction: column">
+<!--the content-->
+<div>
+    <div id="app">
+        <thrift-tool></thrift-tool>
+    </div>
+</div>
+<!-- the footer-->
+<div style="display: flex;flex-direction: column;align-items: center;justify-content:flex-end;flex-grow: 1">
+    <footer id="footer">
+        <p>Designed by Fulton Shaw</p>
+    </footer>
+</div>
+</body>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        components: {
+            'thrift-tool': httpVueLoader('../vue/ThriftTool.vue')
+        }
+    })
+</script>
+
+</html>

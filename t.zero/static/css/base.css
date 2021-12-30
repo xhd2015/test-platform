@@ -1,0 +1,35 @@
+
+.inline {
+    display: inline;
+}
+
+.flex-h {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-v {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea.pre {
+    outline: none;
+    border: none;
+    resize: none;
+    font-family: inherit;
+}
+
+underlined {
+    text-decoration: underline
+}
+
+.config-list-item {
+    margin-right: 20px;
+}
+
+
+.close-button {
+    border-width: 0;
+    background-color: powderblue;
+}

@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>Test Platform - General Request Maker</title>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/textarea.css"/></link>
+    <!-- production version, optimized for size and speed -->
+    <script src="../../js/common/vue2.js"></script>
+    <script src="../../js/common/axios.min.js"></script>
+    <script src="../../js/common/httpVueLoader.js"></script>
+    <script src="../../js/util/FileUtils.js"></script>
+    <script src="../../js/util/RequestUtils.js"></script>
+    <script src="../../js/util/DocumentUtils.js"></script>
+</head>
+
+<body>
+    <textarea style="outline: 0px solid transparent" placeholder="text"></textarea>
+
+    <textarea style="outline: 0px solid transparent; resize: none;" placeholder="text"></textarea>
+
+
+    <textarea style="outline: 0px solid transparent; resize: none;" placeholder="text" disabled="true"></textarea>
+
+    <textarea style="outline: 0px solid transparent; resize: none;border: 0" placeholder="no border" disabled="true"></textarea>
+
+
+    <textarea style="outline: 0px solid transparent; resize: none;" placeholder="text" onclick="arguments[0].preventDefault()" ondblclick="console.log(arguments)"></textarea>
+
+     <div ondblclick="console.log('dblclick on div');toggleTextArea.disabled=false;toggleTextArea.focus()" onfocusout="toggleTextArea.disabled=true">
+    <textarea style="outline: 0px solid transparent; resize: none;" placeholder="text" disabled="true" id="toggleTextArea"></textarea>
+</div>
+
+</body>
+<script>
+
+</script>
+
+</html>

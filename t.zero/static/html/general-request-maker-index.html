@@ -1,0 +1,50 @@
+<html style="height: 100%">
+<head>
+    <title>Test Platform - Index of General Request Maker</title>
+    <!-- production version, optimized for size and speed -->
+    <script src="../js/common/vue2.js"></script>
+    <script src="../js/util/RequestUtils.js"></script>
+    <meta charset="UTF-8">
+</head>
+<body style="min-height: 100%;margin-top: 0;margin-bottom: 0; display: flex;flex-direction: column">
+<div>
+    <div id="app">
+        <p>Welcome to Test Platform, following links are configured for you:</p>
+        <ul>
+            <li><a href="general-request-maker.html">Create a new Playground...</a></li>
+            <li v-for="config in configs"><a :href="'general-request-maker.html?initKey=' + config">{{config}}</a></li>
+        </ul>
+    </div>
+</div>
+
+<div style="display: flex;flex-direction: column;align-items: center;justify-content:flex-end;flex-grow: 1">
+    <footer id="footer">
+        <p style="">Designed by Fulton Shaw</p>
+    </footer>
+</div>
+</body>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data:{
+            configs:[]
+        },
+        mounted() {
+            let _this = this
+            RequestUtils.request({
+                uri : '/user/listConfigs',
+                async:true
+                },{
+                   success(resp){
+                       _this.configs = JSON.parse(resp)
+                   },
+                   fail(code,resp){
+                       alert("failed to load configs, response:" + resp)
+                   }
+                }
+            )
+        }
+    })
+
+</script>
+</html>

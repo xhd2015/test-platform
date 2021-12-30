@@ -1,0 +1,50 @@
+<html style="height: 100%">
+<head>
+    <title>Test Platform Documentation - JSON Tools</title>
+    <meta charset="UTF-8">
+    <!-- production version, optimized for size and speed -->
+    <script src="../../js/common/vue2.js"></script>
+    <script src="../../js/util/DocumentUtils.js"></script>
+    <script src="../../js/util/RequestUtils.js"></script>
+</head>
+<body style="min-height: 100%;margin-top: 0;margin-bottom: 0; display: flex;flex-direction: column">
+<div id="app">
+    <h1>JSON Tools</h1>
+    <p>
+        The json tools is a local javascript based json operation tool, it supports query on multiple json object arrays using powerful SQL by assigning each array a unique identifier as table name.Specifically the SQL dialect used is Sqlite3,which is embedded in modern browser's javascript integration.
+    </p>
+
+    <h1>Design Purpose</h1>
+    <p>
+        The core essence of the JSON Tools is its miscellaneous functionalities provided through a simpler cleaner user interface.
+    </p>
+    <p>
+
+    </p>
+    <h1>Internal Reference</h1>
+    <p>
+        The JSON Tools uses SQLite as a sql server backend, so it requires the agent(i.e. the browser) to support Web SQL(which is deprecated now).The standard is <a href="http://www.w3.org/TR/webdatabase/#database">here</a>.
+    </p>
+    <p>
+        To avoid any possible limitation of depending on current deprecated API, we abstract a SQL client to handle sql operations and issues.
+    </p>
+</div>
+
+<div style="display: flex;flex-direction: column;align-items: center;justify-content:flex-end;flex-grow: 1">
+    <footer id="footer">
+        <p style="">Designed by Fulton Shaw</p>
+    </footer>
+</div>
+</body>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data:{
+
+        }
+    })
+
+
+</script>
+
+</html>

@@ -1,0 +1,7 @@
+{
+  "name": "monaco-editor-embed",
+  "version": "1.0.0",
+  "dependencies": {
+    "monaco-editor": "^0.18.1"
+  }
+}

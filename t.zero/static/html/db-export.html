@@ -1,0 +1,54 @@
+<html style="height: 100%">
+
+<head>
+    <title>Test Platform - Database Tools</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <link rel="stylesheet" data-name="vs/editor/editor.main"
+          href="../monaco-editor/node_modules/monaco-editor/min/vs/editor/editor.main.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <!-- production version, optimized for size and speed -->
+    <script src="../js/common/vue2.js"></script>
+    <script src="../js/common/httpVueLoader.js"></script>
+    <script src="../js/util/FileUtils.js"></script>
+    <script src="../js/util/RequestUtils.js"></script>
+    <script src="../js/util/DocumentUtils.js"></script>
+    <script src="../js/util/StringUtils.js"></script>
+    <script src="../js/util/ObjectUtils.js"></script>
+    <script src="../js/des.js"></script>
+    <script src="../js/common/lodash4.13.1.min.js"></script>
+    <script src="../js/util/JsonUtils.js"></script>
+
+</head>
+
+<body style="min-height: 100%;margin-top: 0;margin-bottom: 0; display: flex;flex-direction: column">
+<script>var require = {paths: {'vs': '../monaco-editor/node_modules/monaco-editor/min/vs'}};</script>
+<script src="../monaco-editor/node_modules/monaco-editor/min/vs/loader.js"></script>
+<script src="../monaco-editor/node_modules/monaco-editor/min/vs/editor/editor.main.nls.js"></script>
+<script src="../monaco-editor/node_modules/monaco-editor/min/vs/editor/editor.main.js"></script>
+<!--the content-->
+<div>
+    <div id="app">
+        <database-query></database-query>
+    </div>
+</div>
+<!-- the footer-->
+<div style="display: flex;flex-direction: column;align-items: center;justify-content:flex-end;flex-grow: 1">
+    <footer id="footer">
+        <p>Designed by Fulton Shaw</p>
+    </footer>
+</div>
+</body>
+<script>
+    var app = new Vue({
+        el: '#app',
+        components: {
+            'database-query': httpVueLoader('../vue/DatabaseQuery.vue')
+        }
+    })
+
+</script>
+
+</html>

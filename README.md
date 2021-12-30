@@ -8,3 +8,10 @@ This toolset per company, per team, even per developer, requires a well detailed
 So, let's start!
 
 # Overview
+
+`t.zero` is short for `test platform.0`
+
+# Quickstart
+
+# Documentation
+[doc/index.md](doc/index.md)

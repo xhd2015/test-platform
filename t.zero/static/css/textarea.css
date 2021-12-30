@@ -1,0 +1,35 @@
+.autoresize {
+    display: block;
+    margin:0 auto;
+    overflow: hidden;
+    width: 550px;
+    font-size: 14px;
+    height: 18px;
+    line-height: 24px;
+    padding:2px;
+}
+textarea {
+    /* outline: 0 none; */
+    /* border-color: rgba(229, 235, 240, 0.8); */
+    /* box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6); */
+}
+
+
+textarea.message-box {
+    display:block;
+    height: auto;
+    overflow: auto;
+    margin:0;
+    font-family: Courier New, sans-serif;
+    border: none;
+    box-shadow: none;
+    background-color: #f0f0f0;
+    width: 100%;
+    padding:6px 12px;
+    border-radius: 4px;
+}
+
+textarea.message-box.error {
+    color: #900;
+    background-color: #fee;
+}

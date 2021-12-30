@@ -1,0 +1,36 @@
+<html style="height: 100%">
+<head>
+    <title>Test Platform - Dubbo Tools</title>
+    <!-- production version, optimized for size and speed -->
+    <script src="../js/common/vue2.js"></script>
+    <script src="../js/util/DocumentUtils.js"></script>
+    <script src="../js/util/StringUtils.js"></script>
+    <script src="../js/util/RequestUtils.js"></script>
+    <script src="../js/util/AdUtils.js"></script>
+    <script src="../js/common/httpVueLoader.js"></script>
+    <script src="../js/util/JsonUtils.js"></script>
+    <script src="../js/util/FileUtils.js"></script>
+    <script src="../js/common/lodash4.13.1.min.js"></script>
+    <meta charset="UTF-8">
+</head>
+<body style="min-height: 100%;margin-top: 0;margin-bottom: 0; display: flex;flex-direction: column">
+<div id="app">
+    <dubbo-tools></dubbo-tools>
+</div>
+
+<div style="display: flex;flex-direction: column;align-items: center;justify-content:flex-end;flex-grow: 1">
+    <footer id="footer">
+        <p style="">Designed by Fulton Shaw</p>
+    </footer>
+</div>
+</body>
+<script>
+    var app = new Vue({
+        el: '#app',
+        components: {
+            'dubbo-tools': httpVueLoader('../vue/DubboTools.vue')
+        },
+    })
+</script>
+
+</html>

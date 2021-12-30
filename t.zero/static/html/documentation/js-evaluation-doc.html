@@ -1,0 +1,52 @@
+<html style="height: 100%">
+<head>
+    <title>Test Platform Documentation - Javascript Evaluation Tools</title>
+    <meta charset="UTF-8">
+    <!-- production version, optimized for size and speed -->
+    <script src="../../js/common/vue2.js"></script>
+    <script src="../../js/util/DocumentUtils.js"></script>
+    <script src="../../js/util/RequestUtils.js"></script>
+</head>
+<body style="min-height: 100%;margin-top: 0;margin-bottom: 0; display: flex;flex-direction: column">
+<div id="app">
+    <h1>Description</h1>
+    <p>
+        In most result area we have planted a Javascript Evaluation ability to support any possible operation on the
+        text or json. That's a killer application of the Test Platform, making it the most popular tools used by
+        professional and non-professional persons.
+    </p>
+    <h1>Supported Auxiliary Functions</h1>
+    <ul>
+        <li>unique(array): sort the array and remove all repeated elements,leave only unique elements;</li>
+        <li>splitNumber(s, split=","): split the string to an array of number;</li>
+        <li>count(s, c): count have c is there in s,useful to determine how many elements a comma separated list
+            contains;
+        </li>
+    </ul>
+
+    <h1>Functional Interface</h1>
+    <ul>
+        <li>keysOf(keys): only include keys specified, keys can be a comma separated string of keys or a list of keys.Example: this.map(keysOf("id,name"))
+        </li>
+        <li>keysNot(keys): exclude keys specified, keys can be a comma separated string of keys or a list of keys.Example: this.map(keysNot("uuid,date"))
+        </li>
+    </ul>
+
+</div>
+
+<div style="display: flex;flex-direction: column;align-items: center;justify-content:flex-end;flex-grow: 1">
+    <footer id="footer">
+        <p style="">Designed by Fulton Shaw</p>
+    </footer>
+</div>
+</body>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {}
+    })
+
+
+</script>
+
+</html>

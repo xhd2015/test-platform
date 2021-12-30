@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>Test Platform - General Request Maker</title>
+
+    <meta charset="UTF-8">
+    <!-- production version, optimized for size and speed -->
+    <script src="../../js/common/vue2.js"></script>
+    <script src="../../js/common/httpVueLoader.js"></script>
+    <script src="../../js/util/DocumentUtils.js"></script>
+</head>
+
+<body>
+  <div id="app">
+      <double-click-editable-textarea></double-click-editable-textarea>
+  </div>
+</div>
+
+</body>
+<script>
+    var app = new Vue({
+        el: '#app',
+        components: {
+            'double-click-editable-textarea': httpVueLoader('../../vue/DoubleClickEditableTextarea.vue')
+        }
+    })
+
+</script>
+
+</html>

@@ -1,0 +1,73 @@
+<html style="height: 100%">
+<head>
+    <title>Test Platform Documentation - Ad Tools</title>
+    <meta charset="UTF-8">
+    <!-- production version, optimized for size and speed -->
+    <script src="../../js/common/vue2.js"></script>
+    <script src="../../js/util/DocumentUtils.js"></script>
+    <script src="../../js/util/RequestUtils.js"></script>
+</head>
+<body style="min-height: 100%;margin-top: 0;margin-bottom: 0; display: flex;flex-direction: column">
+<div id="app">
+    <h1>Request Ad Tools</h1>
+    <p>
+        This request tool makes request to either the Browser Server, SSP, or the DSP directly.
+    </p>
+    <p>
+        The return result is in its json format
+    </p>
+    <h1>Click/Show Ad</h1>
+    <p>
+        The Click/Show tool
+    </p>
+
+    <h1>Linux Basics</h1>
+    <p> The cron tab:
+      <pre>
+    # ┌───────────── minute (0 - 59)
+    # │ ┌───────────── hour (0 - 23)
+    # │ │ ┌───────────── day of the month (1 - 31)
+    # │ │ │ ┌───────────── month (1 - 12)
+    # │ │ │ │ ┌───────────── day of the week (0 - 6) (Sunday to Saturday;
+    # │ │ │ │ │                                   7 is also Sunday on some systems)
+    # │ │ │ │ │
+    # │ │ │ │ │
+    # * * * * * command to execute
+</pre>
+    </p>
+
+    <h1>Introspection Tools</h1>
+    <h2>Bean Introspection</h2>
+    <p>
+        The introspection capability is provided by the API: /internal/app/introspection/invoke.It can be used to invoke any registered bean and static method.It support a deep path resolution on a target object.
+    Examples:
+        <pre>localhost:8081/internal/app/introspection/invoke?beanClass=com.fulton_shaw.tools.core.service.experiment.DislikeMultiplyExperimentService&method=getDislikePolicy&args=%5B%22123%22%5D</pre>
+
+    <p>http://localhost:8081/internal/app/introspection/invoke?class=com.fulton_shaw.tools.core.intf.result.LinkUtils&method=encodeSrcArgument&args=[{%22A%22:%22B%22}]</p>
+    <p>
+        "{A:B}"
+    </p>
+
+    <p>http://localhost:8081/internal/app/introspection/invoke?class=com.fulton_shaw.tools.core.intf.result.LinkUtils&method=buildLandingSiteReplace&args=[%22A%22,{%22av%22:29,%22oaid%22:%22XX_OAID%22},%22http://a=__OAID__%22]</p>
+    <p>"http://a=3ca5763280300f76274a1f6d19e64f56"</p>
+    </p>
+</div>
+
+<div style="display: flex;flex-direction: column;align-items: center;justify-content:flex-end;flex-grow: 1">
+    <footer id="footer">
+        <p style="">Designed by Fulton Shaw</p>
+    </footer>
+</div>
+</body>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data:{
+
+        }
+    })
+
+
+</script>
+
+</html>
