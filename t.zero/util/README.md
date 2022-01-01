@@ -1,6 +1,9 @@
 # Usage
 All scripts are written in ES syntax, for usage of Nodejs, see the following section.
 
+# TODO
+Move this directory to [fultonjs](https://github.com/xhd2015/fultonjs).
+
 # Compile to `node.js`
 ```bash
 npm i -D @babel/cli

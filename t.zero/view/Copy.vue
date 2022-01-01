@@ -3,6 +3,7 @@ import { VBtn, VProgressCircular, VSnackbar } from "vuetify/lib/components";
 
 import lodash from "lodash";
 import { resolveFunctional } from "@fultonjs/common/lib/promise";
+import { setClipboard } from "../util/clipboard";
 
 // a tag selector, with builtin repeation-free
 // emit:
@@ -54,14 +55,17 @@ export default {
       this.show = true;
     },
     clickCopy() {
-      const input = document.createElement("input");
-      // input.style = "display:none";
-      input.value = this.loginCommand;
-      document.body.append(input);
-      input.select();
-      document.execCommand("copy");
-      input.remove();
-      this.copyStatus = this.copiedStatusText;
+      this.copyStatus = this.waitCopyStatusText;
+      setClipboard(this.myText).then(() => {
+        this.copyStatus = this.copiedStatusText;
+      });
+      //   const input = document.createElement("input");
+      //   // input.style = "display:none";
+      //   input.value = this.loginCommand;
+      //   document.body.append(input);
+      //   input.select();
+      //   document.execCommand("copy");
+      //   input.remove();
     },
   },
   render() {
