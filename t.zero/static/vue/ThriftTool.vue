@@ -49,7 +49,7 @@
                 // let transport = new Thrift.Transport("http://x.d:8888",{useCORS:true});
                 let transport = new Thrift.TWebSocketTransport("http://x.d:8888")
                 let protocol = new Thrift.TBinaryProtocol(transport, false, false);
-                let client = new WebcastGameInfoServiceClient(protocol,protocol);
+                let client = new projectGameInfoServiceClient(protocol,protocol);
 
 
                 let resp = client.MGetPlaySwitch(ThriftWrapper.wrapReq("MGetPlaySwitchReq", new MGetPlaySwitchReq({

@@ -4,7 +4,7 @@ import VueRouter from 'vue-router'
 // import Home from '../view/main-frame/Home.vue'
 import NotFound from "../view/NotFound.vue"
 
-import {JSONPretty,LogParser,RegexMatcher,StringConvert} from "../view"
+import {JSONPretty,LogParser,RegexMatcher,StringConvert,GRPC} from "../view"
 
 const Home = {}
 
@@ -43,6 +43,11 @@ const routes = [
     path: '/string/conv', // the initial page's route is set to /index.html
     name: 'StringConverter',
     component: StringConvert,
+  },
+  {
+    path: '/grpc', // the initial page's route is set to /index.html
+    name: 'GRPC',
+    component: GRPC,
   },
 //   {
 //     path: '/about',

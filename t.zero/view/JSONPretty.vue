@@ -67,9 +67,9 @@ export default {
 
   render() {
     return (
-      <VContainer class="pl-2">
+      <VContainer>
         <VRow>
-          <VCol class="d-flex ml-0 pa-0" style={{ alignItems: "flex-end" }}>
+          <VCol class="d-flex" style={{ alignItems: "flex-end" }}>
             <VBtn small dense onClick={() => this.load()}>
               Load...
             </VBtn>
@@ -80,7 +80,6 @@ export default {
           <VCol cols="12" class="pa-0">
             <VTextarea
               outlined
-              class="pa-0"
               style={{ width: "100%", height2: "200px" }}
               vModel={this.text}
               placeholder="json content"

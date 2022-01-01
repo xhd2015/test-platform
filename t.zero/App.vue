@@ -1,6 +1,7 @@
 <script>
 import Vue from "vue";
 import {
+  VSpacer,
   VBtn,
   VContainer,
   VRow,
@@ -21,9 +22,38 @@ import {
 
 import { routes } from "./router";
 import { Header, NavList, Footer } from "./view/main-frame";
+import { Messages, Copy } from "./view";
+
+import { message } from "./support";
+import { injectCopyHandler, injectMessageHandler } from "./support/inject";
 // import Messages from "./views/Messages";
 
+// these two are global unhandled errors
+window.onerror = function (msg, url, line, col, error) {
+  //  console.log("on error:", error)
+  message.showError(msg + "," + error?.message);
+  //code to handle or report error goes here
+};
+// event:{reason:"message thrown"}
+window.addEventListener("unhandledrejection", function (event) {
+  const err = event.reason;
+  if (err) {
+    message.showError(err.message);
+  }
+  //handle error here
+  //event.promise contains the promise object
+  //event.reason contains the reason for the rejection
+});
+
 export default {
+  created() {
+    injectMessageHandler((message, options) => {
+      this.$refs.messages.push(message, options);
+    });
+    injectCopyHandler((text, options) => {
+      this.$refs.copy.showCopy(text, options);
+    });
+  },
   mounted() {},
   data() {
     return {
@@ -34,6 +64,9 @@ export default {
     return (
       <VApp class="grey lighten-4">
         <Header />
+
+        <Messages ref="messages" />
+        <Copy ref="copy" />
         <VMain style={{ display: "flex" }} app>
           <VRow>
             <VCol cols="2">
@@ -50,15 +83,21 @@ export default {
                 <VListItem>
                   <router-link to="/string/conv">String Converter</router-link>
                 </VListItem>
+                <VListItem>
+                  <router-link to="/grpc">GRPC</router-link>
+                </VListItem>
               </VList>
             </VCol>
-            <VCol cols="10" class="mt-2">
+            <VCol cols="8" class="mt-2">
               <router-view></router-view>
             </VCol>
+
+            <VCol cols="2">
+              <VSpacer />
+            </VCol>
           </VRow>
-         
         </VMain>
-         <Footer />
+        <Footer />
         {
           // <VAppBar app>
           //   <VAppBarNavIcon

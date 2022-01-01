@@ -7,7 +7,7 @@
 
 //HELPER FUNCTIONS AND STRUCTURES
 
-WebcastGameInfoService_MLoginGame_args = function(args) {
+projectGameInfoService_MLoginGame_args = function(args) {
   this.req = null;
   if (args) {
     if (args.req !== undefined) {
@@ -15,8 +15,8 @@ WebcastGameInfoService_MLoginGame_args = function(args) {
     }
   }
 };
-WebcastGameInfoService_MLoginGame_args.prototype = {};
-WebcastGameInfoService_MLoginGame_args.prototype.read = function(input) {
+projectGameInfoService_MLoginGame_args.prototype = {};
+projectGameInfoService_MLoginGame_args.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -49,8 +49,8 @@ WebcastGameInfoService_MLoginGame_args.prototype.read = function(input) {
   return;
 };
 
-WebcastGameInfoService_MLoginGame_args.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_MLoginGame_args');
+projectGameInfoService_MLoginGame_args.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_MLoginGame_args');
   if (this.req !== null && this.req !== undefined) {
     output.writeFieldBegin('req', Thrift.Type.STRUCT, 1);
     this.req.write(output);
@@ -61,7 +61,7 @@ WebcastGameInfoService_MLoginGame_args.prototype.write = function(output) {
   return;
 };
 
-WebcastGameInfoService_MLoginGame_result = function(args) {
+projectGameInfoService_MLoginGame_result = function(args) {
   this.success = null;
   if (args) {
     if (args.success !== undefined) {
@@ -69,8 +69,8 @@ WebcastGameInfoService_MLoginGame_result = function(args) {
     }
   }
 };
-WebcastGameInfoService_MLoginGame_result.prototype = {};
-WebcastGameInfoService_MLoginGame_result.prototype.read = function(input) {
+projectGameInfoService_MLoginGame_result.prototype = {};
+projectGameInfoService_MLoginGame_result.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -103,8 +103,8 @@ WebcastGameInfoService_MLoginGame_result.prototype.read = function(input) {
   return;
 };
 
-WebcastGameInfoService_MLoginGame_result.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_MLoginGame_result');
+projectGameInfoService_MLoginGame_result.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_MLoginGame_result');
   if (this.success !== null && this.success !== undefined) {
     output.writeFieldBegin('success', Thrift.Type.STRUCT, 0);
     this.success.write(output);
@@ -115,7 +115,7 @@ WebcastGameInfoService_MLoginGame_result.prototype.write = function(output) {
   return;
 };
 
-WebcastGameInfoService_MLogoutGame_args = function(args) {
+projectGameInfoService_MLogoutGame_args = function(args) {
   this.req = null;
   if (args) {
     if (args.req !== undefined) {
@@ -123,8 +123,8 @@ WebcastGameInfoService_MLogoutGame_args = function(args) {
     }
   }
 };
-WebcastGameInfoService_MLogoutGame_args.prototype = {};
-WebcastGameInfoService_MLogoutGame_args.prototype.read = function(input) {
+projectGameInfoService_MLogoutGame_args.prototype = {};
+projectGameInfoService_MLogoutGame_args.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -157,8 +157,8 @@ WebcastGameInfoService_MLogoutGame_args.prototype.read = function(input) {
   return;
 };
 
-WebcastGameInfoService_MLogoutGame_args.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_MLogoutGame_args');
+projectGameInfoService_MLogoutGame_args.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_MLogoutGame_args');
   if (this.req !== null && this.req !== undefined) {
     output.writeFieldBegin('req', Thrift.Type.STRUCT, 1);
     this.req.write(output);
@@ -169,7 +169,7 @@ WebcastGameInfoService_MLogoutGame_args.prototype.write = function(output) {
   return;
 };
 
-WebcastGameInfoService_MLogoutGame_result = function(args) {
+projectGameInfoService_MLogoutGame_result = function(args) {
   this.success = null;
   if (args) {
     if (args.success !== undefined) {
@@ -177,8 +177,8 @@ WebcastGameInfoService_MLogoutGame_result = function(args) {
     }
   }
 };
-WebcastGameInfoService_MLogoutGame_result.prototype = {};
-WebcastGameInfoService_MLogoutGame_result.prototype.read = function(input) {
+projectGameInfoService_MLogoutGame_result.prototype = {};
+projectGameInfoService_MLogoutGame_result.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -211,8 +211,8 @@ WebcastGameInfoService_MLogoutGame_result.prototype.read = function(input) {
   return;
 };
 
-WebcastGameInfoService_MLogoutGame_result.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_MLogoutGame_result');
+projectGameInfoService_MLogoutGame_result.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_MLogoutGame_result');
   if (this.success !== null && this.success !== undefined) {
     output.writeFieldBegin('success', Thrift.Type.STRUCT, 0);
     this.success.write(output);
@@ -223,7 +223,7 @@ WebcastGameInfoService_MLogoutGame_result.prototype.write = function(output) {
   return;
 };
 
-WebcastGameInfoService_MIsGameOnline_args = function(args) {
+projectGameInfoService_MIsGameOnline_args = function(args) {
   this.req = null;
   if (args) {
     if (args.req !== undefined) {
@@ -231,8 +231,8 @@ WebcastGameInfoService_MIsGameOnline_args = function(args) {
     }
   }
 };
-WebcastGameInfoService_MIsGameOnline_args.prototype = {};
-WebcastGameInfoService_MIsGameOnline_args.prototype.read = function(input) {
+projectGameInfoService_MIsGameOnline_args.prototype = {};
+projectGameInfoService_MIsGameOnline_args.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -265,8 +265,8 @@ WebcastGameInfoService_MIsGameOnline_args.prototype.read = function(input) {
   return;
 };
 
-WebcastGameInfoService_MIsGameOnline_args.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_MIsGameOnline_args');
+projectGameInfoService_MIsGameOnline_args.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_MIsGameOnline_args');
   if (this.req !== null && this.req !== undefined) {
     output.writeFieldBegin('req', Thrift.Type.STRUCT, 1);
     this.req.write(output);
@@ -277,7 +277,7 @@ WebcastGameInfoService_MIsGameOnline_args.prototype.write = function(output) {
   return;
 };
 
-WebcastGameInfoService_MIsGameOnline_result = function(args) {
+projectGameInfoService_MIsGameOnline_result = function(args) {
   this.success = null;
   if (args) {
     if (args.success !== undefined) {
@@ -285,8 +285,8 @@ WebcastGameInfoService_MIsGameOnline_result = function(args) {
     }
   }
 };
-WebcastGameInfoService_MIsGameOnline_result.prototype = {};
-WebcastGameInfoService_MIsGameOnline_result.prototype.read = function(input) {
+projectGameInfoService_MIsGameOnline_result.prototype = {};
+projectGameInfoService_MIsGameOnline_result.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -319,8 +319,8 @@ WebcastGameInfoService_MIsGameOnline_result.prototype.read = function(input) {
   return;
 };
 
-WebcastGameInfoService_MIsGameOnline_result.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_MIsGameOnline_result');
+projectGameInfoService_MIsGameOnline_result.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_MIsGameOnline_result');
   if (this.success !== null && this.success !== undefined) {
     output.writeFieldBegin('success', Thrift.Type.STRUCT, 0);
     this.success.write(output);
@@ -331,7 +331,7 @@ WebcastGameInfoService_MIsGameOnline_result.prototype.write = function(output) {
   return;
 };
 
-WebcastGameInfoService_PermissionAuthorize_args = function(args) {
+projectGameInfoService_PermissionAuthorize_args = function(args) {
   this.req = null;
   if (args) {
     if (args.req !== undefined) {
@@ -339,8 +339,8 @@ WebcastGameInfoService_PermissionAuthorize_args = function(args) {
     }
   }
 };
-WebcastGameInfoService_PermissionAuthorize_args.prototype = {};
-WebcastGameInfoService_PermissionAuthorize_args.prototype.read = function(input) {
+projectGameInfoService_PermissionAuthorize_args.prototype = {};
+projectGameInfoService_PermissionAuthorize_args.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -373,8 +373,8 @@ WebcastGameInfoService_PermissionAuthorize_args.prototype.read = function(input)
   return;
 };
 
-WebcastGameInfoService_PermissionAuthorize_args.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_PermissionAuthorize_args');
+projectGameInfoService_PermissionAuthorize_args.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_PermissionAuthorize_args');
   if (this.req !== null && this.req !== undefined) {
     output.writeFieldBegin('req', Thrift.Type.STRUCT, 1);
     this.req.write(output);
@@ -385,7 +385,7 @@ WebcastGameInfoService_PermissionAuthorize_args.prototype.write = function(outpu
   return;
 };
 
-WebcastGameInfoService_PermissionAuthorize_result = function(args) {
+projectGameInfoService_PermissionAuthorize_result = function(args) {
   this.success = null;
   if (args) {
     if (args.success !== undefined) {
@@ -393,8 +393,8 @@ WebcastGameInfoService_PermissionAuthorize_result = function(args) {
     }
   }
 };
-WebcastGameInfoService_PermissionAuthorize_result.prototype = {};
-WebcastGameInfoService_PermissionAuthorize_result.prototype.read = function(input) {
+projectGameInfoService_PermissionAuthorize_result.prototype = {};
+projectGameInfoService_PermissionAuthorize_result.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -427,8 +427,8 @@ WebcastGameInfoService_PermissionAuthorize_result.prototype.read = function(inpu
   return;
 };
 
-WebcastGameInfoService_PermissionAuthorize_result.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_PermissionAuthorize_result');
+projectGameInfoService_PermissionAuthorize_result.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_PermissionAuthorize_result');
   if (this.success !== null && this.success !== undefined) {
     output.writeFieldBegin('success', Thrift.Type.STRUCT, 0);
     this.success.write(output);
@@ -439,7 +439,7 @@ WebcastGameInfoService_PermissionAuthorize_result.prototype.write = function(out
   return;
 };
 
-WebcastGameInfoService_MPermissionCheck_args = function(args) {
+projectGameInfoService_MPermissionCheck_args = function(args) {
   this.req = null;
   if (args) {
     if (args.req !== undefined) {
@@ -447,8 +447,8 @@ WebcastGameInfoService_MPermissionCheck_args = function(args) {
     }
   }
 };
-WebcastGameInfoService_MPermissionCheck_args.prototype = {};
-WebcastGameInfoService_MPermissionCheck_args.prototype.read = function(input) {
+projectGameInfoService_MPermissionCheck_args.prototype = {};
+projectGameInfoService_MPermissionCheck_args.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -481,8 +481,8 @@ WebcastGameInfoService_MPermissionCheck_args.prototype.read = function(input) {
   return;
 };
 
-WebcastGameInfoService_MPermissionCheck_args.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_MPermissionCheck_args');
+projectGameInfoService_MPermissionCheck_args.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_MPermissionCheck_args');
   if (this.req !== null && this.req !== undefined) {
     output.writeFieldBegin('req', Thrift.Type.STRUCT, 1);
     this.req.write(output);
@@ -493,7 +493,7 @@ WebcastGameInfoService_MPermissionCheck_args.prototype.write = function(output) 
   return;
 };
 
-WebcastGameInfoService_MPermissionCheck_result = function(args) {
+projectGameInfoService_MPermissionCheck_result = function(args) {
   this.success = null;
   if (args) {
     if (args.success !== undefined) {
@@ -501,8 +501,8 @@ WebcastGameInfoService_MPermissionCheck_result = function(args) {
     }
   }
 };
-WebcastGameInfoService_MPermissionCheck_result.prototype = {};
-WebcastGameInfoService_MPermissionCheck_result.prototype.read = function(input) {
+projectGameInfoService_MPermissionCheck_result.prototype = {};
+projectGameInfoService_MPermissionCheck_result.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -535,8 +535,8 @@ WebcastGameInfoService_MPermissionCheck_result.prototype.read = function(input) 
   return;
 };
 
-WebcastGameInfoService_MPermissionCheck_result.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_MPermissionCheck_result');
+projectGameInfoService_MPermissionCheck_result.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_MPermissionCheck_result');
   if (this.success !== null && this.success !== undefined) {
     output.writeFieldBegin('success', Thrift.Type.STRUCT, 0);
     this.success.write(output);
@@ -547,7 +547,7 @@ WebcastGameInfoService_MPermissionCheck_result.prototype.write = function(output
   return;
 };
 
-WebcastGameInfoService_ClientConfigExtra_args = function(args) {
+projectGameInfoService_ClientConfigExtra_args = function(args) {
   this.req = null;
   if (args) {
     if (args.req !== undefined) {
@@ -555,8 +555,8 @@ WebcastGameInfoService_ClientConfigExtra_args = function(args) {
     }
   }
 };
-WebcastGameInfoService_ClientConfigExtra_args.prototype = {};
-WebcastGameInfoService_ClientConfigExtra_args.prototype.read = function(input) {
+projectGameInfoService_ClientConfigExtra_args.prototype = {};
+projectGameInfoService_ClientConfigExtra_args.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -589,8 +589,8 @@ WebcastGameInfoService_ClientConfigExtra_args.prototype.read = function(input) {
   return;
 };
 
-WebcastGameInfoService_ClientConfigExtra_args.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_ClientConfigExtra_args');
+projectGameInfoService_ClientConfigExtra_args.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_ClientConfigExtra_args');
   if (this.req !== null && this.req !== undefined) {
     output.writeFieldBegin('req', Thrift.Type.STRUCT, 1);
     this.req.write(output);
@@ -601,7 +601,7 @@ WebcastGameInfoService_ClientConfigExtra_args.prototype.write = function(output)
   return;
 };
 
-WebcastGameInfoService_ClientConfigExtra_result = function(args) {
+projectGameInfoService_ClientConfigExtra_result = function(args) {
   this.success = null;
   if (args) {
     if (args.success !== undefined) {
@@ -609,8 +609,8 @@ WebcastGameInfoService_ClientConfigExtra_result = function(args) {
     }
   }
 };
-WebcastGameInfoService_ClientConfigExtra_result.prototype = {};
-WebcastGameInfoService_ClientConfigExtra_result.prototype.read = function(input) {
+projectGameInfoService_ClientConfigExtra_result.prototype = {};
+projectGameInfoService_ClientConfigExtra_result.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -643,8 +643,8 @@ WebcastGameInfoService_ClientConfigExtra_result.prototype.read = function(input)
   return;
 };
 
-WebcastGameInfoService_ClientConfigExtra_result.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_ClientConfigExtra_result');
+projectGameInfoService_ClientConfigExtra_result.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_ClientConfigExtra_result');
   if (this.success !== null && this.success !== undefined) {
     output.writeFieldBegin('success', Thrift.Type.STRUCT, 0);
     this.success.write(output);
@@ -655,7 +655,7 @@ WebcastGameInfoService_ClientConfigExtra_result.prototype.write = function(outpu
   return;
 };
 
-WebcastGameInfoService_GetDanceMusicList_args = function(args) {
+projectGameInfoService_GetDanceMusicList_args = function(args) {
   this.req = null;
   if (args) {
     if (args.req !== undefined) {
@@ -663,8 +663,8 @@ WebcastGameInfoService_GetDanceMusicList_args = function(args) {
     }
   }
 };
-WebcastGameInfoService_GetDanceMusicList_args.prototype = {};
-WebcastGameInfoService_GetDanceMusicList_args.prototype.read = function(input) {
+projectGameInfoService_GetDanceMusicList_args.prototype = {};
+projectGameInfoService_GetDanceMusicList_args.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -697,8 +697,8 @@ WebcastGameInfoService_GetDanceMusicList_args.prototype.read = function(input) {
   return;
 };
 
-WebcastGameInfoService_GetDanceMusicList_args.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_GetDanceMusicList_args');
+projectGameInfoService_GetDanceMusicList_args.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_GetDanceMusicList_args');
   if (this.req !== null && this.req !== undefined) {
     output.writeFieldBegin('req', Thrift.Type.STRUCT, 1);
     this.req.write(output);
@@ -709,7 +709,7 @@ WebcastGameInfoService_GetDanceMusicList_args.prototype.write = function(output)
   return;
 };
 
-WebcastGameInfoService_GetDanceMusicList_result = function(args) {
+projectGameInfoService_GetDanceMusicList_result = function(args) {
   this.success = null;
   if (args) {
     if (args.success !== undefined) {
@@ -717,8 +717,8 @@ WebcastGameInfoService_GetDanceMusicList_result = function(args) {
     }
   }
 };
-WebcastGameInfoService_GetDanceMusicList_result.prototype = {};
-WebcastGameInfoService_GetDanceMusicList_result.prototype.read = function(input) {
+projectGameInfoService_GetDanceMusicList_result.prototype = {};
+projectGameInfoService_GetDanceMusicList_result.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -751,8 +751,8 @@ WebcastGameInfoService_GetDanceMusicList_result.prototype.read = function(input)
   return;
 };
 
-WebcastGameInfoService_GetDanceMusicList_result.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_GetDanceMusicList_result');
+projectGameInfoService_GetDanceMusicList_result.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_GetDanceMusicList_result');
   if (this.success !== null && this.success !== undefined) {
     output.writeFieldBegin('success', Thrift.Type.STRUCT, 0);
     this.success.write(output);
@@ -763,7 +763,7 @@ WebcastGameInfoService_GetDanceMusicList_result.prototype.write = function(outpu
   return;
 };
 
-WebcastGameInfoService_StartEffectGame_args = function(args) {
+projectGameInfoService_StartEffectGame_args = function(args) {
   this.req = null;
   if (args) {
     if (args.req !== undefined) {
@@ -771,8 +771,8 @@ WebcastGameInfoService_StartEffectGame_args = function(args) {
     }
   }
 };
-WebcastGameInfoService_StartEffectGame_args.prototype = {};
-WebcastGameInfoService_StartEffectGame_args.prototype.read = function(input) {
+projectGameInfoService_StartEffectGame_args.prototype = {};
+projectGameInfoService_StartEffectGame_args.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -805,8 +805,8 @@ WebcastGameInfoService_StartEffectGame_args.prototype.read = function(input) {
   return;
 };
 
-WebcastGameInfoService_StartEffectGame_args.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_StartEffectGame_args');
+projectGameInfoService_StartEffectGame_args.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_StartEffectGame_args');
   if (this.req !== null && this.req !== undefined) {
     output.writeFieldBegin('req', Thrift.Type.STRUCT, 1);
     this.req.write(output);
@@ -817,7 +817,7 @@ WebcastGameInfoService_StartEffectGame_args.prototype.write = function(output) {
   return;
 };
 
-WebcastGameInfoService_StartEffectGame_result = function(args) {
+projectGameInfoService_StartEffectGame_result = function(args) {
   this.success = null;
   if (args) {
     if (args.success !== undefined) {
@@ -825,8 +825,8 @@ WebcastGameInfoService_StartEffectGame_result = function(args) {
     }
   }
 };
-WebcastGameInfoService_StartEffectGame_result.prototype = {};
-WebcastGameInfoService_StartEffectGame_result.prototype.read = function(input) {
+projectGameInfoService_StartEffectGame_result.prototype = {};
+projectGameInfoService_StartEffectGame_result.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -859,8 +859,8 @@ WebcastGameInfoService_StartEffectGame_result.prototype.read = function(input) {
   return;
 };
 
-WebcastGameInfoService_StartEffectGame_result.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_StartEffectGame_result');
+projectGameInfoService_StartEffectGame_result.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_StartEffectGame_result');
   if (this.success !== null && this.success !== undefined) {
     output.writeFieldBegin('success', Thrift.Type.STRUCT, 0);
     this.success.write(output);
@@ -871,7 +871,7 @@ WebcastGameInfoService_StartEffectGame_result.prototype.write = function(output)
   return;
 };
 
-WebcastGameInfoService_FinishEffectGame_args = function(args) {
+projectGameInfoService_FinishEffectGame_args = function(args) {
   this.req = null;
   if (args) {
     if (args.req !== undefined) {
@@ -879,8 +879,8 @@ WebcastGameInfoService_FinishEffectGame_args = function(args) {
     }
   }
 };
-WebcastGameInfoService_FinishEffectGame_args.prototype = {};
-WebcastGameInfoService_FinishEffectGame_args.prototype.read = function(input) {
+projectGameInfoService_FinishEffectGame_args.prototype = {};
+projectGameInfoService_FinishEffectGame_args.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -913,8 +913,8 @@ WebcastGameInfoService_FinishEffectGame_args.prototype.read = function(input) {
   return;
 };
 
-WebcastGameInfoService_FinishEffectGame_args.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_FinishEffectGame_args');
+projectGameInfoService_FinishEffectGame_args.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_FinishEffectGame_args');
   if (this.req !== null && this.req !== undefined) {
     output.writeFieldBegin('req', Thrift.Type.STRUCT, 1);
     this.req.write(output);
@@ -925,7 +925,7 @@ WebcastGameInfoService_FinishEffectGame_args.prototype.write = function(output) 
   return;
 };
 
-WebcastGameInfoService_FinishEffectGame_result = function(args) {
+projectGameInfoService_FinishEffectGame_result = function(args) {
   this.success = null;
   if (args) {
     if (args.success !== undefined) {
@@ -933,8 +933,8 @@ WebcastGameInfoService_FinishEffectGame_result = function(args) {
     }
   }
 };
-WebcastGameInfoService_FinishEffectGame_result.prototype = {};
-WebcastGameInfoService_FinishEffectGame_result.prototype.read = function(input) {
+projectGameInfoService_FinishEffectGame_result.prototype = {};
+projectGameInfoService_FinishEffectGame_result.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -967,8 +967,8 @@ WebcastGameInfoService_FinishEffectGame_result.prototype.read = function(input) 
   return;
 };
 
-WebcastGameInfoService_FinishEffectGame_result.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_FinishEffectGame_result');
+projectGameInfoService_FinishEffectGame_result.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_FinishEffectGame_result');
   if (this.success !== null && this.success !== undefined) {
     output.writeFieldBegin('success', Thrift.Type.STRUCT, 0);
     this.success.write(output);
@@ -979,7 +979,7 @@ WebcastGameInfoService_FinishEffectGame_result.prototype.write = function(output
   return;
 };
 
-WebcastGameInfoService_SetRewardInfo_args = function(args) {
+projectGameInfoService_SetRewardInfo_args = function(args) {
   this.req = null;
   if (args) {
     if (args.req !== undefined) {
@@ -987,8 +987,8 @@ WebcastGameInfoService_SetRewardInfo_args = function(args) {
     }
   }
 };
-WebcastGameInfoService_SetRewardInfo_args.prototype = {};
-WebcastGameInfoService_SetRewardInfo_args.prototype.read = function(input) {
+projectGameInfoService_SetRewardInfo_args.prototype = {};
+projectGameInfoService_SetRewardInfo_args.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -1021,8 +1021,8 @@ WebcastGameInfoService_SetRewardInfo_args.prototype.read = function(input) {
   return;
 };
 
-WebcastGameInfoService_SetRewardInfo_args.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_SetRewardInfo_args');
+projectGameInfoService_SetRewardInfo_args.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_SetRewardInfo_args');
   if (this.req !== null && this.req !== undefined) {
     output.writeFieldBegin('req', Thrift.Type.STRUCT, 1);
     this.req.write(output);
@@ -1033,7 +1033,7 @@ WebcastGameInfoService_SetRewardInfo_args.prototype.write = function(output) {
   return;
 };
 
-WebcastGameInfoService_SetRewardInfo_result = function(args) {
+projectGameInfoService_SetRewardInfo_result = function(args) {
   this.success = null;
   if (args) {
     if (args.success !== undefined) {
@@ -1041,8 +1041,8 @@ WebcastGameInfoService_SetRewardInfo_result = function(args) {
     }
   }
 };
-WebcastGameInfoService_SetRewardInfo_result.prototype = {};
-WebcastGameInfoService_SetRewardInfo_result.prototype.read = function(input) {
+projectGameInfoService_SetRewardInfo_result.prototype = {};
+projectGameInfoService_SetRewardInfo_result.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -1075,8 +1075,8 @@ WebcastGameInfoService_SetRewardInfo_result.prototype.read = function(input) {
   return;
 };
 
-WebcastGameInfoService_SetRewardInfo_result.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_SetRewardInfo_result');
+projectGameInfoService_SetRewardInfo_result.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_SetRewardInfo_result');
   if (this.success !== null && this.success !== undefined) {
     output.writeFieldBegin('success', Thrift.Type.STRUCT, 0);
     this.success.write(output);
@@ -1087,7 +1087,7 @@ WebcastGameInfoService_SetRewardInfo_result.prototype.write = function(output) {
   return;
 };
 
-WebcastGameInfoService_GetRewardInfo_args = function(args) {
+projectGameInfoService_GetRewardInfo_args = function(args) {
   this.req = null;
   if (args) {
     if (args.req !== undefined) {
@@ -1095,8 +1095,8 @@ WebcastGameInfoService_GetRewardInfo_args = function(args) {
     }
   }
 };
-WebcastGameInfoService_GetRewardInfo_args.prototype = {};
-WebcastGameInfoService_GetRewardInfo_args.prototype.read = function(input) {
+projectGameInfoService_GetRewardInfo_args.prototype = {};
+projectGameInfoService_GetRewardInfo_args.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -1129,8 +1129,8 @@ WebcastGameInfoService_GetRewardInfo_args.prototype.read = function(input) {
   return;
 };
 
-WebcastGameInfoService_GetRewardInfo_args.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_GetRewardInfo_args');
+projectGameInfoService_GetRewardInfo_args.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_GetRewardInfo_args');
   if (this.req !== null && this.req !== undefined) {
     output.writeFieldBegin('req', Thrift.Type.STRUCT, 1);
     this.req.write(output);
@@ -1141,7 +1141,7 @@ WebcastGameInfoService_GetRewardInfo_args.prototype.write = function(output) {
   return;
 };
 
-WebcastGameInfoService_GetRewardInfo_result = function(args) {
+projectGameInfoService_GetRewardInfo_result = function(args) {
   this.success = null;
   if (args) {
     if (args.success !== undefined) {
@@ -1149,8 +1149,8 @@ WebcastGameInfoService_GetRewardInfo_result = function(args) {
     }
   }
 };
-WebcastGameInfoService_GetRewardInfo_result.prototype = {};
-WebcastGameInfoService_GetRewardInfo_result.prototype.read = function(input) {
+projectGameInfoService_GetRewardInfo_result.prototype = {};
+projectGameInfoService_GetRewardInfo_result.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -1183,8 +1183,8 @@ WebcastGameInfoService_GetRewardInfo_result.prototype.read = function(input) {
   return;
 };
 
-WebcastGameInfoService_GetRewardInfo_result.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_GetRewardInfo_result');
+projectGameInfoService_GetRewardInfo_result.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_GetRewardInfo_result');
   if (this.success !== null && this.success !== undefined) {
     output.writeFieldBegin('success', Thrift.Type.STRUCT, 0);
     this.success.write(output);
@@ -1195,7 +1195,7 @@ WebcastGameInfoService_GetRewardInfo_result.prototype.write = function(output) {
   return;
 };
 
-WebcastGameInfoService_StartGame_args = function(args) {
+projectGameInfoService_StartGame_args = function(args) {
   this.req = null;
   if (args) {
     if (args.req !== undefined) {
@@ -1203,8 +1203,8 @@ WebcastGameInfoService_StartGame_args = function(args) {
     }
   }
 };
-WebcastGameInfoService_StartGame_args.prototype = {};
-WebcastGameInfoService_StartGame_args.prototype.read = function(input) {
+projectGameInfoService_StartGame_args.prototype = {};
+projectGameInfoService_StartGame_args.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -1237,8 +1237,8 @@ WebcastGameInfoService_StartGame_args.prototype.read = function(input) {
   return;
 };
 
-WebcastGameInfoService_StartGame_args.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_StartGame_args');
+projectGameInfoService_StartGame_args.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_StartGame_args');
   if (this.req !== null && this.req !== undefined) {
     output.writeFieldBegin('req', Thrift.Type.STRUCT, 1);
     this.req.write(output);
@@ -1249,7 +1249,7 @@ WebcastGameInfoService_StartGame_args.prototype.write = function(output) {
   return;
 };
 
-WebcastGameInfoService_StartGame_result = function(args) {
+projectGameInfoService_StartGame_result = function(args) {
   this.success = null;
   if (args) {
     if (args.success !== undefined) {
@@ -1257,8 +1257,8 @@ WebcastGameInfoService_StartGame_result = function(args) {
     }
   }
 };
-WebcastGameInfoService_StartGame_result.prototype = {};
-WebcastGameInfoService_StartGame_result.prototype.read = function(input) {
+projectGameInfoService_StartGame_result.prototype = {};
+projectGameInfoService_StartGame_result.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -1291,8 +1291,8 @@ WebcastGameInfoService_StartGame_result.prototype.read = function(input) {
   return;
 };
 
-WebcastGameInfoService_StartGame_result.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_StartGame_result');
+projectGameInfoService_StartGame_result.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_StartGame_result');
   if (this.success !== null && this.success !== undefined) {
     output.writeFieldBegin('success', Thrift.Type.STRUCT, 0);
     this.success.write(output);
@@ -1303,7 +1303,7 @@ WebcastGameInfoService_StartGame_result.prototype.write = function(output) {
   return;
 };
 
-WebcastGameInfoService_FinishGame_args = function(args) {
+projectGameInfoService_FinishGame_args = function(args) {
   this.req = null;
   if (args) {
     if (args.req !== undefined) {
@@ -1311,8 +1311,8 @@ WebcastGameInfoService_FinishGame_args = function(args) {
     }
   }
 };
-WebcastGameInfoService_FinishGame_args.prototype = {};
-WebcastGameInfoService_FinishGame_args.prototype.read = function(input) {
+projectGameInfoService_FinishGame_args.prototype = {};
+projectGameInfoService_FinishGame_args.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -1345,8 +1345,8 @@ WebcastGameInfoService_FinishGame_args.prototype.read = function(input) {
   return;
 };
 
-WebcastGameInfoService_FinishGame_args.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_FinishGame_args');
+projectGameInfoService_FinishGame_args.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_FinishGame_args');
   if (this.req !== null && this.req !== undefined) {
     output.writeFieldBegin('req', Thrift.Type.STRUCT, 1);
     this.req.write(output);
@@ -1357,7 +1357,7 @@ WebcastGameInfoService_FinishGame_args.prototype.write = function(output) {
   return;
 };
 
-WebcastGameInfoService_FinishGame_result = function(args) {
+projectGameInfoService_FinishGame_result = function(args) {
   this.success = null;
   if (args) {
     if (args.success !== undefined) {
@@ -1365,8 +1365,8 @@ WebcastGameInfoService_FinishGame_result = function(args) {
     }
   }
 };
-WebcastGameInfoService_FinishGame_result.prototype = {};
-WebcastGameInfoService_FinishGame_result.prototype.read = function(input) {
+projectGameInfoService_FinishGame_result.prototype = {};
+projectGameInfoService_FinishGame_result.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -1399,8 +1399,8 @@ WebcastGameInfoService_FinishGame_result.prototype.read = function(input) {
   return;
 };
 
-WebcastGameInfoService_FinishGame_result.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_FinishGame_result');
+projectGameInfoService_FinishGame_result.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_FinishGame_result');
   if (this.success !== null && this.success !== undefined) {
     output.writeFieldBegin('success', Thrift.Type.STRUCT, 0);
     this.success.write(output);
@@ -1411,7 +1411,7 @@ WebcastGameInfoService_FinishGame_result.prototype.write = function(output) {
   return;
 };
 
-WebcastGameInfoService_GetGameResource_args = function(args) {
+projectGameInfoService_GetGameResource_args = function(args) {
   this.req = null;
   if (args) {
     if (args.req !== undefined) {
@@ -1419,8 +1419,8 @@ WebcastGameInfoService_GetGameResource_args = function(args) {
     }
   }
 };
-WebcastGameInfoService_GetGameResource_args.prototype = {};
-WebcastGameInfoService_GetGameResource_args.prototype.read = function(input) {
+projectGameInfoService_GetGameResource_args.prototype = {};
+projectGameInfoService_GetGameResource_args.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -1453,8 +1453,8 @@ WebcastGameInfoService_GetGameResource_args.prototype.read = function(input) {
   return;
 };
 
-WebcastGameInfoService_GetGameResource_args.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_GetGameResource_args');
+projectGameInfoService_GetGameResource_args.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_GetGameResource_args');
   if (this.req !== null && this.req !== undefined) {
     output.writeFieldBegin('req', Thrift.Type.STRUCT, 1);
     this.req.write(output);
@@ -1465,7 +1465,7 @@ WebcastGameInfoService_GetGameResource_args.prototype.write = function(output) {
   return;
 };
 
-WebcastGameInfoService_GetGameResource_result = function(args) {
+projectGameInfoService_GetGameResource_result = function(args) {
   this.success = null;
   if (args) {
     if (args.success !== undefined) {
@@ -1473,8 +1473,8 @@ WebcastGameInfoService_GetGameResource_result = function(args) {
     }
   }
 };
-WebcastGameInfoService_GetGameResource_result.prototype = {};
-WebcastGameInfoService_GetGameResource_result.prototype.read = function(input) {
+projectGameInfoService_GetGameResource_result.prototype = {};
+projectGameInfoService_GetGameResource_result.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -1507,8 +1507,8 @@ WebcastGameInfoService_GetGameResource_result.prototype.read = function(input) {
   return;
 };
 
-WebcastGameInfoService_GetGameResource_result.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_GetGameResource_result');
+projectGameInfoService_GetGameResource_result.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_GetGameResource_result');
   if (this.success !== null && this.success !== undefined) {
     output.writeFieldBegin('success', Thrift.Type.STRUCT, 0);
     this.success.write(output);
@@ -1519,7 +1519,7 @@ WebcastGameInfoService_GetGameResource_result.prototype.write = function(output)
   return;
 };
 
-WebcastGameInfoService_MAddReward_args = function(args) {
+projectGameInfoService_MAddReward_args = function(args) {
   this.req = null;
   if (args) {
     if (args.req !== undefined) {
@@ -1527,8 +1527,8 @@ WebcastGameInfoService_MAddReward_args = function(args) {
     }
   }
 };
-WebcastGameInfoService_MAddReward_args.prototype = {};
-WebcastGameInfoService_MAddReward_args.prototype.read = function(input) {
+projectGameInfoService_MAddReward_args.prototype = {};
+projectGameInfoService_MAddReward_args.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -1561,8 +1561,8 @@ WebcastGameInfoService_MAddReward_args.prototype.read = function(input) {
   return;
 };
 
-WebcastGameInfoService_MAddReward_args.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_MAddReward_args');
+projectGameInfoService_MAddReward_args.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_MAddReward_args');
   if (this.req !== null && this.req !== undefined) {
     output.writeFieldBegin('req', Thrift.Type.STRUCT, 1);
     this.req.write(output);
@@ -1573,7 +1573,7 @@ WebcastGameInfoService_MAddReward_args.prototype.write = function(output) {
   return;
 };
 
-WebcastGameInfoService_MAddReward_result = function(args) {
+projectGameInfoService_MAddReward_result = function(args) {
   this.success = null;
   if (args) {
     if (args.success !== undefined) {
@@ -1581,8 +1581,8 @@ WebcastGameInfoService_MAddReward_result = function(args) {
     }
   }
 };
-WebcastGameInfoService_MAddReward_result.prototype = {};
-WebcastGameInfoService_MAddReward_result.prototype.read = function(input) {
+projectGameInfoService_MAddReward_result.prototype = {};
+projectGameInfoService_MAddReward_result.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -1615,8 +1615,8 @@ WebcastGameInfoService_MAddReward_result.prototype.read = function(input) {
   return;
 };
 
-WebcastGameInfoService_MAddReward_result.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_MAddReward_result');
+projectGameInfoService_MAddReward_result.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_MAddReward_result');
   if (this.success !== null && this.success !== undefined) {
     output.writeFieldBegin('success', Thrift.Type.STRUCT, 0);
     this.success.write(output);
@@ -1627,7 +1627,7 @@ WebcastGameInfoService_MAddReward_result.prototype.write = function(output) {
   return;
 };
 
-WebcastGameInfoService_MDeleteReward_args = function(args) {
+projectGameInfoService_MDeleteReward_args = function(args) {
   this.req = null;
   if (args) {
     if (args.req !== undefined) {
@@ -1635,8 +1635,8 @@ WebcastGameInfoService_MDeleteReward_args = function(args) {
     }
   }
 };
-WebcastGameInfoService_MDeleteReward_args.prototype = {};
-WebcastGameInfoService_MDeleteReward_args.prototype.read = function(input) {
+projectGameInfoService_MDeleteReward_args.prototype = {};
+projectGameInfoService_MDeleteReward_args.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -1669,8 +1669,8 @@ WebcastGameInfoService_MDeleteReward_args.prototype.read = function(input) {
   return;
 };
 
-WebcastGameInfoService_MDeleteReward_args.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_MDeleteReward_args');
+projectGameInfoService_MDeleteReward_args.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_MDeleteReward_args');
   if (this.req !== null && this.req !== undefined) {
     output.writeFieldBegin('req', Thrift.Type.STRUCT, 1);
     this.req.write(output);
@@ -1681,7 +1681,7 @@ WebcastGameInfoService_MDeleteReward_args.prototype.write = function(output) {
   return;
 };
 
-WebcastGameInfoService_MDeleteReward_result = function(args) {
+projectGameInfoService_MDeleteReward_result = function(args) {
   this.success = null;
   if (args) {
     if (args.success !== undefined) {
@@ -1689,8 +1689,8 @@ WebcastGameInfoService_MDeleteReward_result = function(args) {
     }
   }
 };
-WebcastGameInfoService_MDeleteReward_result.prototype = {};
-WebcastGameInfoService_MDeleteReward_result.prototype.read = function(input) {
+projectGameInfoService_MDeleteReward_result.prototype = {};
+projectGameInfoService_MDeleteReward_result.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -1723,8 +1723,8 @@ WebcastGameInfoService_MDeleteReward_result.prototype.read = function(input) {
   return;
 };
 
-WebcastGameInfoService_MDeleteReward_result.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_MDeleteReward_result');
+projectGameInfoService_MDeleteReward_result.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_MDeleteReward_result');
   if (this.success !== null && this.success !== undefined) {
     output.writeFieldBegin('success', Thrift.Type.STRUCT, 0);
     this.success.write(output);
@@ -1735,7 +1735,7 @@ WebcastGameInfoService_MDeleteReward_result.prototype.write = function(output) {
   return;
 };
 
-WebcastGameInfoService_MUpdateReward_args = function(args) {
+projectGameInfoService_MUpdateReward_args = function(args) {
   this.req = null;
   if (args) {
     if (args.req !== undefined) {
@@ -1743,8 +1743,8 @@ WebcastGameInfoService_MUpdateReward_args = function(args) {
     }
   }
 };
-WebcastGameInfoService_MUpdateReward_args.prototype = {};
-WebcastGameInfoService_MUpdateReward_args.prototype.read = function(input) {
+projectGameInfoService_MUpdateReward_args.prototype = {};
+projectGameInfoService_MUpdateReward_args.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -1777,8 +1777,8 @@ WebcastGameInfoService_MUpdateReward_args.prototype.read = function(input) {
   return;
 };
 
-WebcastGameInfoService_MUpdateReward_args.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_MUpdateReward_args');
+projectGameInfoService_MUpdateReward_args.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_MUpdateReward_args');
   if (this.req !== null && this.req !== undefined) {
     output.writeFieldBegin('req', Thrift.Type.STRUCT, 1);
     this.req.write(output);
@@ -1789,7 +1789,7 @@ WebcastGameInfoService_MUpdateReward_args.prototype.write = function(output) {
   return;
 };
 
-WebcastGameInfoService_MUpdateReward_result = function(args) {
+projectGameInfoService_MUpdateReward_result = function(args) {
   this.success = null;
   if (args) {
     if (args.success !== undefined) {
@@ -1797,8 +1797,8 @@ WebcastGameInfoService_MUpdateReward_result = function(args) {
     }
   }
 };
-WebcastGameInfoService_MUpdateReward_result.prototype = {};
-WebcastGameInfoService_MUpdateReward_result.prototype.read = function(input) {
+projectGameInfoService_MUpdateReward_result.prototype = {};
+projectGameInfoService_MUpdateReward_result.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -1831,8 +1831,8 @@ WebcastGameInfoService_MUpdateReward_result.prototype.read = function(input) {
   return;
 };
 
-WebcastGameInfoService_MUpdateReward_result.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_MUpdateReward_result');
+projectGameInfoService_MUpdateReward_result.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_MUpdateReward_result');
   if (this.success !== null && this.success !== undefined) {
     output.writeFieldBegin('success', Thrift.Type.STRUCT, 0);
     this.success.write(output);
@@ -1843,7 +1843,7 @@ WebcastGameInfoService_MUpdateReward_result.prototype.write = function(output) {
   return;
 };
 
-WebcastGameInfoService_GetReward_args = function(args) {
+projectGameInfoService_GetReward_args = function(args) {
   this.req = null;
   if (args) {
     if (args.req !== undefined) {
@@ -1851,8 +1851,8 @@ WebcastGameInfoService_GetReward_args = function(args) {
     }
   }
 };
-WebcastGameInfoService_GetReward_args.prototype = {};
-WebcastGameInfoService_GetReward_args.prototype.read = function(input) {
+projectGameInfoService_GetReward_args.prototype = {};
+projectGameInfoService_GetReward_args.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -1885,8 +1885,8 @@ WebcastGameInfoService_GetReward_args.prototype.read = function(input) {
   return;
 };
 
-WebcastGameInfoService_GetReward_args.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_GetReward_args');
+projectGameInfoService_GetReward_args.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_GetReward_args');
   if (this.req !== null && this.req !== undefined) {
     output.writeFieldBegin('req', Thrift.Type.STRUCT, 1);
     this.req.write(output);
@@ -1897,7 +1897,7 @@ WebcastGameInfoService_GetReward_args.prototype.write = function(output) {
   return;
 };
 
-WebcastGameInfoService_GetReward_result = function(args) {
+projectGameInfoService_GetReward_result = function(args) {
   this.success = null;
   if (args) {
     if (args.success !== undefined) {
@@ -1905,8 +1905,8 @@ WebcastGameInfoService_GetReward_result = function(args) {
     }
   }
 };
-WebcastGameInfoService_GetReward_result.prototype = {};
-WebcastGameInfoService_GetReward_result.prototype.read = function(input) {
+projectGameInfoService_GetReward_result.prototype = {};
+projectGameInfoService_GetReward_result.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -1939,8 +1939,8 @@ WebcastGameInfoService_GetReward_result.prototype.read = function(input) {
   return;
 };
 
-WebcastGameInfoService_GetReward_result.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_GetReward_result');
+projectGameInfoService_GetReward_result.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_GetReward_result');
   if (this.success !== null && this.success !== undefined) {
     output.writeFieldBegin('success', Thrift.Type.STRUCT, 0);
     this.success.write(output);
@@ -1951,7 +1951,7 @@ WebcastGameInfoService_GetReward_result.prototype.write = function(output) {
   return;
 };
 
-WebcastGameInfoService_MGetPlaySwitch_args = function(args) {
+projectGameInfoService_MGetPlaySwitch_args = function(args) {
   this.req = null;
   if (args) {
     if (args.req !== undefined) {
@@ -1959,8 +1959,8 @@ WebcastGameInfoService_MGetPlaySwitch_args = function(args) {
     }
   }
 };
-WebcastGameInfoService_MGetPlaySwitch_args.prototype = {};
-WebcastGameInfoService_MGetPlaySwitch_args.prototype.read = function(input) {
+projectGameInfoService_MGetPlaySwitch_args.prototype = {};
+projectGameInfoService_MGetPlaySwitch_args.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -1993,8 +1993,8 @@ WebcastGameInfoService_MGetPlaySwitch_args.prototype.read = function(input) {
   return;
 };
 
-WebcastGameInfoService_MGetPlaySwitch_args.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_MGetPlaySwitch_args');
+projectGameInfoService_MGetPlaySwitch_args.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_MGetPlaySwitch_args');
   if (this.req !== null && this.req !== undefined) {
     output.writeFieldBegin('req', Thrift.Type.STRUCT, 1);
     this.req.write(output);
@@ -2005,7 +2005,7 @@ WebcastGameInfoService_MGetPlaySwitch_args.prototype.write = function(output) {
   return;
 };
 
-WebcastGameInfoService_MGetPlaySwitch_result = function(args) {
+projectGameInfoService_MGetPlaySwitch_result = function(args) {
   this.success = null;
   if (args) {
     if (args.success !== undefined) {
@@ -2013,8 +2013,8 @@ WebcastGameInfoService_MGetPlaySwitch_result = function(args) {
     }
   }
 };
-WebcastGameInfoService_MGetPlaySwitch_result.prototype = {};
-WebcastGameInfoService_MGetPlaySwitch_result.prototype.read = function(input) {
+projectGameInfoService_MGetPlaySwitch_result.prototype = {};
+projectGameInfoService_MGetPlaySwitch_result.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -2047,8 +2047,8 @@ WebcastGameInfoService_MGetPlaySwitch_result.prototype.read = function(input) {
   return;
 };
 
-WebcastGameInfoService_MGetPlaySwitch_result.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_MGetPlaySwitch_result');
+projectGameInfoService_MGetPlaySwitch_result.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_MGetPlaySwitch_result');
   if (this.success !== null && this.success !== undefined) {
     output.writeFieldBegin('success', Thrift.Type.STRUCT, 0);
     this.success.write(output);
@@ -2059,7 +2059,7 @@ WebcastGameInfoService_MGetPlaySwitch_result.prototype.write = function(output) 
   return;
 };
 
-WebcastGameInfoService_MUpdatePlaySwitch_args = function(args) {
+projectGameInfoService_MUpdatePlaySwitch_args = function(args) {
   this.req = null;
   if (args) {
     if (args.req !== undefined) {
@@ -2067,8 +2067,8 @@ WebcastGameInfoService_MUpdatePlaySwitch_args = function(args) {
     }
   }
 };
-WebcastGameInfoService_MUpdatePlaySwitch_args.prototype = {};
-WebcastGameInfoService_MUpdatePlaySwitch_args.prototype.read = function(input) {
+projectGameInfoService_MUpdatePlaySwitch_args.prototype = {};
+projectGameInfoService_MUpdatePlaySwitch_args.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -2101,8 +2101,8 @@ WebcastGameInfoService_MUpdatePlaySwitch_args.prototype.read = function(input) {
   return;
 };
 
-WebcastGameInfoService_MUpdatePlaySwitch_args.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_MUpdatePlaySwitch_args');
+projectGameInfoService_MUpdatePlaySwitch_args.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_MUpdatePlaySwitch_args');
   if (this.req !== null && this.req !== undefined) {
     output.writeFieldBegin('req', Thrift.Type.STRUCT, 1);
     this.req.write(output);
@@ -2113,7 +2113,7 @@ WebcastGameInfoService_MUpdatePlaySwitch_args.prototype.write = function(output)
   return;
 };
 
-WebcastGameInfoService_MUpdatePlaySwitch_result = function(args) {
+projectGameInfoService_MUpdatePlaySwitch_result = function(args) {
   this.success = null;
   if (args) {
     if (args.success !== undefined) {
@@ -2121,8 +2121,8 @@ WebcastGameInfoService_MUpdatePlaySwitch_result = function(args) {
     }
   }
 };
-WebcastGameInfoService_MUpdatePlaySwitch_result.prototype = {};
-WebcastGameInfoService_MUpdatePlaySwitch_result.prototype.read = function(input) {
+projectGameInfoService_MUpdatePlaySwitch_result.prototype = {};
+projectGameInfoService_MUpdatePlaySwitch_result.prototype.read = function(input) {
   input.readStructBegin();
   while (true)
   {
@@ -2155,8 +2155,8 @@ WebcastGameInfoService_MUpdatePlaySwitch_result.prototype.read = function(input)
   return;
 };
 
-WebcastGameInfoService_MUpdatePlaySwitch_result.prototype.write = function(output) {
-  output.writeStructBegin('WebcastGameInfoService_MUpdatePlaySwitch_result');
+projectGameInfoService_MUpdatePlaySwitch_result.prototype.write = function(output) {
+  output.writeStructBegin('projectGameInfoService_MUpdatePlaySwitch_result');
   if (this.success !== null && this.success !== undefined) {
     output.writeFieldBegin('success', Thrift.Type.STRUCT, 0);
     this.success.write(output);
@@ -2167,22 +2167,22 @@ WebcastGameInfoService_MUpdatePlaySwitch_result.prototype.write = function(outpu
   return;
 };
 
-WebcastGameInfoServiceClient = function(input, output) {
+projectGameInfoServiceClient = function(input, output) {
     this.input = input;
     this.output = (!output) ? input : output;
     this.seqid = 0;
 };
-WebcastGameInfoServiceClient.prototype = {};
-WebcastGameInfoServiceClient.prototype.MLoginGame = function(req, callback) {
+projectGameInfoServiceClient.prototype = {};
+projectGameInfoServiceClient.prototype.MLoginGame = function(req, callback) {
   this.send_MLoginGame(req, callback); 
   if (!callback) {
     return this.recv_MLoginGame();
   }
 };
 
-WebcastGameInfoServiceClient.prototype.send_MLoginGame = function(req, callback) {
+projectGameInfoServiceClient.prototype.send_MLoginGame = function(req, callback) {
   this.output.writeMessageBegin('MLoginGame', Thrift.MessageType.CALL, this.seqid);
-  var args = new WebcastGameInfoService_MLoginGame_args();
+  var args = new projectGameInfoService_MLoginGame_args();
   args.req = req;
   args.write(this.output);
   this.output.writeMessageEnd();
@@ -2202,7 +2202,7 @@ WebcastGameInfoServiceClient.prototype.send_MLoginGame = function(req, callback)
   }
 };
 
-WebcastGameInfoServiceClient.prototype.recv_MLoginGame = function() {
+projectGameInfoServiceClient.prototype.recv_MLoginGame = function() {
   var ret = this.input.readMessageBegin();
   var fname = ret.fname;
   var mtype = ret.mtype;
@@ -2213,7 +2213,7 @@ WebcastGameInfoServiceClient.prototype.recv_MLoginGame = function() {
     this.input.readMessageEnd();
     throw x;
   }
-  var result = new WebcastGameInfoService_MLoginGame_result();
+  var result = new projectGameInfoService_MLoginGame_result();
   result.read(this.input);
   this.input.readMessageEnd();
 
@@ -2222,16 +2222,16 @@ WebcastGameInfoServiceClient.prototype.recv_MLoginGame = function() {
   }
   throw 'MLoginGame failed: unknown result';
 };
-WebcastGameInfoServiceClient.prototype.MLogoutGame = function(req, callback) {
+projectGameInfoServiceClient.prototype.MLogoutGame = function(req, callback) {
   this.send_MLogoutGame(req, callback); 
   if (!callback) {
     return this.recv_MLogoutGame();
   }
 };
 
-WebcastGameInfoServiceClient.prototype.send_MLogoutGame = function(req, callback) {
+projectGameInfoServiceClient.prototype.send_MLogoutGame = function(req, callback) {
   this.output.writeMessageBegin('MLogoutGame', Thrift.MessageType.CALL, this.seqid);
-  var args = new WebcastGameInfoService_MLogoutGame_args();
+  var args = new projectGameInfoService_MLogoutGame_args();
   args.req = req;
   args.write(this.output);
   this.output.writeMessageEnd();
@@ -2251,7 +2251,7 @@ WebcastGameInfoServiceClient.prototype.send_MLogoutGame = function(req, callback
   }
 };
 
-WebcastGameInfoServiceClient.prototype.recv_MLogoutGame = function() {
+projectGameInfoServiceClient.prototype.recv_MLogoutGame = function() {
   var ret = this.input.readMessageBegin();
   var fname = ret.fname;
   var mtype = ret.mtype;
@@ -2262,7 +2262,7 @@ WebcastGameInfoServiceClient.prototype.recv_MLogoutGame = function() {
     this.input.readMessageEnd();
     throw x;
   }
-  var result = new WebcastGameInfoService_MLogoutGame_result();
+  var result = new projectGameInfoService_MLogoutGame_result();
   result.read(this.input);
   this.input.readMessageEnd();
 
@@ -2271,16 +2271,16 @@ WebcastGameInfoServiceClient.prototype.recv_MLogoutGame = function() {
   }
   throw 'MLogoutGame failed: unknown result';
 };
-WebcastGameInfoServiceClient.prototype.MIsGameOnline = function(req, callback) {
+projectGameInfoServiceClient.prototype.MIsGameOnline = function(req, callback) {
   this.send_MIsGameOnline(req, callback); 
   if (!callback) {
     return this.recv_MIsGameOnline();
   }
 };
 
-WebcastGameInfoServiceClient.prototype.send_MIsGameOnline = function(req, callback) {
+projectGameInfoServiceClient.prototype.send_MIsGameOnline = function(req, callback) {
   this.output.writeMessageBegin('MIsGameOnline', Thrift.MessageType.CALL, this.seqid);
-  var args = new WebcastGameInfoService_MIsGameOnline_args();
+  var args = new projectGameInfoService_MIsGameOnline_args();
   args.req = req;
   args.write(this.output);
   this.output.writeMessageEnd();
@@ -2300,7 +2300,7 @@ WebcastGameInfoServiceClient.prototype.send_MIsGameOnline = function(req, callba
   }
 };
 
-WebcastGameInfoServiceClient.prototype.recv_MIsGameOnline = function() {
+projectGameInfoServiceClient.prototype.recv_MIsGameOnline = function() {
   var ret = this.input.readMessageBegin();
   var fname = ret.fname;
   var mtype = ret.mtype;
@@ -2311,7 +2311,7 @@ WebcastGameInfoServiceClient.prototype.recv_MIsGameOnline = function() {
     this.input.readMessageEnd();
     throw x;
   }
-  var result = new WebcastGameInfoService_MIsGameOnline_result();
+  var result = new projectGameInfoService_MIsGameOnline_result();
   result.read(this.input);
   this.input.readMessageEnd();
 
@@ -2320,16 +2320,16 @@ WebcastGameInfoServiceClient.prototype.recv_MIsGameOnline = function() {
   }
   throw 'MIsGameOnline failed: unknown result';
 };
-WebcastGameInfoServiceClient.prototype.PermissionAuthorize = function(req, callback) {
+projectGameInfoServiceClient.prototype.PermissionAuthorize = function(req, callback) {
   this.send_PermissionAuthorize(req, callback); 
   if (!callback) {
     return this.recv_PermissionAuthorize();
   }
 };
 
-WebcastGameInfoServiceClient.prototype.send_PermissionAuthorize = function(req, callback) {
+projectGameInfoServiceClient.prototype.send_PermissionAuthorize = function(req, callback) {
   this.output.writeMessageBegin('PermissionAuthorize', Thrift.MessageType.CALL, this.seqid);
-  var args = new WebcastGameInfoService_PermissionAuthorize_args();
+  var args = new projectGameInfoService_PermissionAuthorize_args();
   args.req = req;
   args.write(this.output);
   this.output.writeMessageEnd();
@@ -2349,7 +2349,7 @@ WebcastGameInfoServiceClient.prototype.send_PermissionAuthorize = function(req, 
   }
 };
 
-WebcastGameInfoServiceClient.prototype.recv_PermissionAuthorize = function() {
+projectGameInfoServiceClient.prototype.recv_PermissionAuthorize = function() {
   var ret = this.input.readMessageBegin();
   var fname = ret.fname;
   var mtype = ret.mtype;
@@ -2360,7 +2360,7 @@ WebcastGameInfoServiceClient.prototype.recv_PermissionAuthorize = function() {
     this.input.readMessageEnd();
     throw x;
   }
-  var result = new WebcastGameInfoService_PermissionAuthorize_result();
+  var result = new projectGameInfoService_PermissionAuthorize_result();
   result.read(this.input);
   this.input.readMessageEnd();
 
@@ -2369,16 +2369,16 @@ WebcastGameInfoServiceClient.prototype.recv_PermissionAuthorize = function() {
   }
   throw 'PermissionAuthorize failed: unknown result';
 };
-WebcastGameInfoServiceClient.prototype.MPermissionCheck = function(req, callback) {
+projectGameInfoServiceClient.prototype.MPermissionCheck = function(req, callback) {
   this.send_MPermissionCheck(req, callback); 
   if (!callback) {
     return this.recv_MPermissionCheck();
   }
 };
 
-WebcastGameInfoServiceClient.prototype.send_MPermissionCheck = function(req, callback) {
+projectGameInfoServiceClient.prototype.send_MPermissionCheck = function(req, callback) {
   this.output.writeMessageBegin('MPermissionCheck', Thrift.MessageType.CALL, this.seqid);
-  var args = new WebcastGameInfoService_MPermissionCheck_args();
+  var args = new projectGameInfoService_MPermissionCheck_args();
   args.req = req;
   args.write(this.output);
   this.output.writeMessageEnd();
@@ -2398,7 +2398,7 @@ WebcastGameInfoServiceClient.prototype.send_MPermissionCheck = function(req, cal
   }
 };
 
-WebcastGameInfoServiceClient.prototype.recv_MPermissionCheck = function() {
+projectGameInfoServiceClient.prototype.recv_MPermissionCheck = function() {
   var ret = this.input.readMessageBegin();
   var fname = ret.fname;
   var mtype = ret.mtype;
@@ -2409,7 +2409,7 @@ WebcastGameInfoServiceClient.prototype.recv_MPermissionCheck = function() {
     this.input.readMessageEnd();
     throw x;
   }
-  var result = new WebcastGameInfoService_MPermissionCheck_result();
+  var result = new projectGameInfoService_MPermissionCheck_result();
   result.read(this.input);
   this.input.readMessageEnd();
 
@@ -2418,16 +2418,16 @@ WebcastGameInfoServiceClient.prototype.recv_MPermissionCheck = function() {
   }
   throw 'MPermissionCheck failed: unknown result';
 };
-WebcastGameInfoServiceClient.prototype.ClientConfigExtra = function(req, callback) {
+projectGameInfoServiceClient.prototype.ClientConfigExtra = function(req, callback) {
   this.send_ClientConfigExtra(req, callback); 
   if (!callback) {
     return this.recv_ClientConfigExtra();
   }
 };
 
-WebcastGameInfoServiceClient.prototype.send_ClientConfigExtra = function(req, callback) {
+projectGameInfoServiceClient.prototype.send_ClientConfigExtra = function(req, callback) {
   this.output.writeMessageBegin('ClientConfigExtra', Thrift.MessageType.CALL, this.seqid);
-  var args = new WebcastGameInfoService_ClientConfigExtra_args();
+  var args = new projectGameInfoService_ClientConfigExtra_args();
   args.req = req;
   args.write(this.output);
   this.output.writeMessageEnd();
@@ -2447,7 +2447,7 @@ WebcastGameInfoServiceClient.prototype.send_ClientConfigExtra = function(req, ca
   }
 };
 
-WebcastGameInfoServiceClient.prototype.recv_ClientConfigExtra = function() {
+projectGameInfoServiceClient.prototype.recv_ClientConfigExtra = function() {
   var ret = this.input.readMessageBegin();
   var fname = ret.fname;
   var mtype = ret.mtype;
@@ -2458,7 +2458,7 @@ WebcastGameInfoServiceClient.prototype.recv_ClientConfigExtra = function() {
     this.input.readMessageEnd();
     throw x;
   }
-  var result = new WebcastGameInfoService_ClientConfigExtra_result();
+  var result = new projectGameInfoService_ClientConfigExtra_result();
   result.read(this.input);
   this.input.readMessageEnd();
 
@@ -2467,16 +2467,16 @@ WebcastGameInfoServiceClient.prototype.recv_ClientConfigExtra = function() {
   }
   throw 'ClientConfigExtra failed: unknown result';
 };
-WebcastGameInfoServiceClient.prototype.GetDanceMusicList = function(req, callback) {
+projectGameInfoServiceClient.prototype.GetDanceMusicList = function(req, callback) {
   this.send_GetDanceMusicList(req, callback); 
   if (!callback) {
     return this.recv_GetDanceMusicList();
   }
 };
 
-WebcastGameInfoServiceClient.prototype.send_GetDanceMusicList = function(req, callback) {
+projectGameInfoServiceClient.prototype.send_GetDanceMusicList = function(req, callback) {
   this.output.writeMessageBegin('GetDanceMusicList', Thrift.MessageType.CALL, this.seqid);
-  var args = new WebcastGameInfoService_GetDanceMusicList_args();
+  var args = new projectGameInfoService_GetDanceMusicList_args();
   args.req = req;
   args.write(this.output);
   this.output.writeMessageEnd();
@@ -2496,7 +2496,7 @@ WebcastGameInfoServiceClient.prototype.send_GetDanceMusicList = function(req, ca
   }
 };
 
-WebcastGameInfoServiceClient.prototype.recv_GetDanceMusicList = function() {
+projectGameInfoServiceClient.prototype.recv_GetDanceMusicList = function() {
   var ret = this.input.readMessageBegin();
   var fname = ret.fname;
   var mtype = ret.mtype;
@@ -2507,7 +2507,7 @@ WebcastGameInfoServiceClient.prototype.recv_GetDanceMusicList = function() {
     this.input.readMessageEnd();
     throw x;
   }
-  var result = new WebcastGameInfoService_GetDanceMusicList_result();
+  var result = new projectGameInfoService_GetDanceMusicList_result();
   result.read(this.input);
   this.input.readMessageEnd();
 
@@ -2516,16 +2516,16 @@ WebcastGameInfoServiceClient.prototype.recv_GetDanceMusicList = function() {
   }
   throw 'GetDanceMusicList failed: unknown result';
 };
-WebcastGameInfoServiceClient.prototype.StartEffectGame = function(req, callback) {
+projectGameInfoServiceClient.prototype.StartEffectGame = function(req, callback) {
   this.send_StartEffectGame(req, callback); 
   if (!callback) {
     return this.recv_StartEffectGame();
   }
 };
 
-WebcastGameInfoServiceClient.prototype.send_StartEffectGame = function(req, callback) {
+projectGameInfoServiceClient.prototype.send_StartEffectGame = function(req, callback) {
   this.output.writeMessageBegin('StartEffectGame', Thrift.MessageType.CALL, this.seqid);
-  var args = new WebcastGameInfoService_StartEffectGame_args();
+  var args = new projectGameInfoService_StartEffectGame_args();
   args.req = req;
   args.write(this.output);
   this.output.writeMessageEnd();
@@ -2545,7 +2545,7 @@ WebcastGameInfoServiceClient.prototype.send_StartEffectGame = function(req, call
   }
 };
 
-WebcastGameInfoServiceClient.prototype.recv_StartEffectGame = function() {
+projectGameInfoServiceClient.prototype.recv_StartEffectGame = function() {
   var ret = this.input.readMessageBegin();
   var fname = ret.fname;
   var mtype = ret.mtype;
@@ -2556,7 +2556,7 @@ WebcastGameInfoServiceClient.prototype.recv_StartEffectGame = function() {
     this.input.readMessageEnd();
     throw x;
   }
-  var result = new WebcastGameInfoService_StartEffectGame_result();
+  var result = new projectGameInfoService_StartEffectGame_result();
   result.read(this.input);
   this.input.readMessageEnd();
 
@@ -2565,16 +2565,16 @@ WebcastGameInfoServiceClient.prototype.recv_StartEffectGame = function() {
   }
   throw 'StartEffectGame failed: unknown result';
 };
-WebcastGameInfoServiceClient.prototype.FinishEffectGame = function(req, callback) {
+projectGameInfoServiceClient.prototype.FinishEffectGame = function(req, callback) {
   this.send_FinishEffectGame(req, callback); 
   if (!callback) {
     return this.recv_FinishEffectGame();
   }
 };
 
-WebcastGameInfoServiceClient.prototype.send_FinishEffectGame = function(req, callback) {
+projectGameInfoServiceClient.prototype.send_FinishEffectGame = function(req, callback) {
   this.output.writeMessageBegin('FinishEffectGame', Thrift.MessageType.CALL, this.seqid);
-  var args = new WebcastGameInfoService_FinishEffectGame_args();
+  var args = new projectGameInfoService_FinishEffectGame_args();
   args.req = req;
   args.write(this.output);
   this.output.writeMessageEnd();
@@ -2594,7 +2594,7 @@ WebcastGameInfoServiceClient.prototype.send_FinishEffectGame = function(req, cal
   }
 };
 
-WebcastGameInfoServiceClient.prototype.recv_FinishEffectGame = function() {
+projectGameInfoServiceClient.prototype.recv_FinishEffectGame = function() {
   var ret = this.input.readMessageBegin();
   var fname = ret.fname;
   var mtype = ret.mtype;
@@ -2605,7 +2605,7 @@ WebcastGameInfoServiceClient.prototype.recv_FinishEffectGame = function() {
     this.input.readMessageEnd();
     throw x;
   }
-  var result = new WebcastGameInfoService_FinishEffectGame_result();
+  var result = new projectGameInfoService_FinishEffectGame_result();
   result.read(this.input);
   this.input.readMessageEnd();
 
@@ -2614,16 +2614,16 @@ WebcastGameInfoServiceClient.prototype.recv_FinishEffectGame = function() {
   }
   throw 'FinishEffectGame failed: unknown result';
 };
-WebcastGameInfoServiceClient.prototype.SetRewardInfo = function(req, callback) {
+projectGameInfoServiceClient.prototype.SetRewardInfo = function(req, callback) {
   this.send_SetRewardInfo(req, callback); 
   if (!callback) {
     return this.recv_SetRewardInfo();
   }
 };
 
-WebcastGameInfoServiceClient.prototype.send_SetRewardInfo = function(req, callback) {
+projectGameInfoServiceClient.prototype.send_SetRewardInfo = function(req, callback) {
   this.output.writeMessageBegin('SetRewardInfo', Thrift.MessageType.CALL, this.seqid);
-  var args = new WebcastGameInfoService_SetRewardInfo_args();
+  var args = new projectGameInfoService_SetRewardInfo_args();
   args.req = req;
   args.write(this.output);
   this.output.writeMessageEnd();
@@ -2643,7 +2643,7 @@ WebcastGameInfoServiceClient.prototype.send_SetRewardInfo = function(req, callba
   }
 };
 
-WebcastGameInfoServiceClient.prototype.recv_SetRewardInfo = function() {
+projectGameInfoServiceClient.prototype.recv_SetRewardInfo = function() {
   var ret = this.input.readMessageBegin();
   var fname = ret.fname;
   var mtype = ret.mtype;
@@ -2654,7 +2654,7 @@ WebcastGameInfoServiceClient.prototype.recv_SetRewardInfo = function() {
     this.input.readMessageEnd();
     throw x;
   }
-  var result = new WebcastGameInfoService_SetRewardInfo_result();
+  var result = new projectGameInfoService_SetRewardInfo_result();
   result.read(this.input);
   this.input.readMessageEnd();
 
@@ -2663,16 +2663,16 @@ WebcastGameInfoServiceClient.prototype.recv_SetRewardInfo = function() {
   }
   throw 'SetRewardInfo failed: unknown result';
 };
-WebcastGameInfoServiceClient.prototype.GetRewardInfo = function(req, callback) {
+projectGameInfoServiceClient.prototype.GetRewardInfo = function(req, callback) {
   this.send_GetRewardInfo(req, callback); 
   if (!callback) {
     return this.recv_GetRewardInfo();
   }
 };
 
-WebcastGameInfoServiceClient.prototype.send_GetRewardInfo = function(req, callback) {
+projectGameInfoServiceClient.prototype.send_GetRewardInfo = function(req, callback) {
   this.output.writeMessageBegin('GetRewardInfo', Thrift.MessageType.CALL, this.seqid);
-  var args = new WebcastGameInfoService_GetRewardInfo_args();
+  var args = new projectGameInfoService_GetRewardInfo_args();
   args.req = req;
   args.write(this.output);
   this.output.writeMessageEnd();
@@ -2692,7 +2692,7 @@ WebcastGameInfoServiceClient.prototype.send_GetRewardInfo = function(req, callba
   }
 };
 
-WebcastGameInfoServiceClient.prototype.recv_GetRewardInfo = function() {
+projectGameInfoServiceClient.prototype.recv_GetRewardInfo = function() {
   var ret = this.input.readMessageBegin();
   var fname = ret.fname;
   var mtype = ret.mtype;
@@ -2703,7 +2703,7 @@ WebcastGameInfoServiceClient.prototype.recv_GetRewardInfo = function() {
     this.input.readMessageEnd();
     throw x;
   }
-  var result = new WebcastGameInfoService_GetRewardInfo_result();
+  var result = new projectGameInfoService_GetRewardInfo_result();
   result.read(this.input);
   this.input.readMessageEnd();
 
@@ -2712,16 +2712,16 @@ WebcastGameInfoServiceClient.prototype.recv_GetRewardInfo = function() {
   }
   throw 'GetRewardInfo failed: unknown result';
 };
-WebcastGameInfoServiceClient.prototype.StartGame = function(req, callback) {
+projectGameInfoServiceClient.prototype.StartGame = function(req, callback) {
   this.send_StartGame(req, callback); 
   if (!callback) {
     return this.recv_StartGame();
   }
 };
 
-WebcastGameInfoServiceClient.prototype.send_StartGame = function(req, callback) {
+projectGameInfoServiceClient.prototype.send_StartGame = function(req, callback) {
   this.output.writeMessageBegin('StartGame', Thrift.MessageType.CALL, this.seqid);
-  var args = new WebcastGameInfoService_StartGame_args();
+  var args = new projectGameInfoService_StartGame_args();
   args.req = req;
   args.write(this.output);
   this.output.writeMessageEnd();
@@ -2741,7 +2741,7 @@ WebcastGameInfoServiceClient.prototype.send_StartGame = function(req, callback) 
   }
 };
 
-WebcastGameInfoServiceClient.prototype.recv_StartGame = function() {
+projectGameInfoServiceClient.prototype.recv_StartGame = function() {
   var ret = this.input.readMessageBegin();
   var fname = ret.fname;
   var mtype = ret.mtype;
@@ -2752,7 +2752,7 @@ WebcastGameInfoServiceClient.prototype.recv_StartGame = function() {
     this.input.readMessageEnd();
     throw x;
   }
-  var result = new WebcastGameInfoService_StartGame_result();
+  var result = new projectGameInfoService_StartGame_result();
   result.read(this.input);
   this.input.readMessageEnd();
 
@@ -2761,16 +2761,16 @@ WebcastGameInfoServiceClient.prototype.recv_StartGame = function() {
   }
   throw 'StartGame failed: unknown result';
 };
-WebcastGameInfoServiceClient.prototype.FinishGame = function(req, callback) {
+projectGameInfoServiceClient.prototype.FinishGame = function(req, callback) {
   this.send_FinishGame(req, callback); 
   if (!callback) {
     return this.recv_FinishGame();
   }
 };
 
-WebcastGameInfoServiceClient.prototype.send_FinishGame = function(req, callback) {
+projectGameInfoServiceClient.prototype.send_FinishGame = function(req, callback) {
   this.output.writeMessageBegin('FinishGame', Thrift.MessageType.CALL, this.seqid);
-  var args = new WebcastGameInfoService_FinishGame_args();
+  var args = new projectGameInfoService_FinishGame_args();
   args.req = req;
   args.write(this.output);
   this.output.writeMessageEnd();
@@ -2790,7 +2790,7 @@ WebcastGameInfoServiceClient.prototype.send_FinishGame = function(req, callback)
   }
 };
 
-WebcastGameInfoServiceClient.prototype.recv_FinishGame = function() {
+projectGameInfoServiceClient.prototype.recv_FinishGame = function() {
   var ret = this.input.readMessageBegin();
   var fname = ret.fname;
   var mtype = ret.mtype;
@@ -2801,7 +2801,7 @@ WebcastGameInfoServiceClient.prototype.recv_FinishGame = function() {
     this.input.readMessageEnd();
     throw x;
   }
-  var result = new WebcastGameInfoService_FinishGame_result();
+  var result = new projectGameInfoService_FinishGame_result();
   result.read(this.input);
   this.input.readMessageEnd();
 
@@ -2810,16 +2810,16 @@ WebcastGameInfoServiceClient.prototype.recv_FinishGame = function() {
   }
   throw 'FinishGame failed: unknown result';
 };
-WebcastGameInfoServiceClient.prototype.GetGameResource = function(req, callback) {
+projectGameInfoServiceClient.prototype.GetGameResource = function(req, callback) {
   this.send_GetGameResource(req, callback); 
   if (!callback) {
     return this.recv_GetGameResource();
   }
 };
 
-WebcastGameInfoServiceClient.prototype.send_GetGameResource = function(req, callback) {
+projectGameInfoServiceClient.prototype.send_GetGameResource = function(req, callback) {
   this.output.writeMessageBegin('GetGameResource', Thrift.MessageType.CALL, this.seqid);
-  var args = new WebcastGameInfoService_GetGameResource_args();
+  var args = new projectGameInfoService_GetGameResource_args();
   args.req = req;
   args.write(this.output);
   this.output.writeMessageEnd();
@@ -2839,7 +2839,7 @@ WebcastGameInfoServiceClient.prototype.send_GetGameResource = function(req, call
   }
 };
 
-WebcastGameInfoServiceClient.prototype.recv_GetGameResource = function() {
+projectGameInfoServiceClient.prototype.recv_GetGameResource = function() {
   var ret = this.input.readMessageBegin();
   var fname = ret.fname;
   var mtype = ret.mtype;
@@ -2850,7 +2850,7 @@ WebcastGameInfoServiceClient.prototype.recv_GetGameResource = function() {
     this.input.readMessageEnd();
     throw x;
   }
-  var result = new WebcastGameInfoService_GetGameResource_result();
+  var result = new projectGameInfoService_GetGameResource_result();
   result.read(this.input);
   this.input.readMessageEnd();
 
@@ -2859,16 +2859,16 @@ WebcastGameInfoServiceClient.prototype.recv_GetGameResource = function() {
   }
   throw 'GetGameResource failed: unknown result';
 };
-WebcastGameInfoServiceClient.prototype.MAddReward = function(req, callback) {
+projectGameInfoServiceClient.prototype.MAddReward = function(req, callback) {
   this.send_MAddReward(req, callback); 
   if (!callback) {
     return this.recv_MAddReward();
   }
 };
 
-WebcastGameInfoServiceClient.prototype.send_MAddReward = function(req, callback) {
+projectGameInfoServiceClient.prototype.send_MAddReward = function(req, callback) {
   this.output.writeMessageBegin('MAddReward', Thrift.MessageType.CALL, this.seqid);
-  var args = new WebcastGameInfoService_MAddReward_args();
+  var args = new projectGameInfoService_MAddReward_args();
   args.req = req;
   args.write(this.output);
   this.output.writeMessageEnd();
@@ -2888,7 +2888,7 @@ WebcastGameInfoServiceClient.prototype.send_MAddReward = function(req, callback)
   }
 };
 
-WebcastGameInfoServiceClient.prototype.recv_MAddReward = function() {
+projectGameInfoServiceClient.prototype.recv_MAddReward = function() {
   var ret = this.input.readMessageBegin();
   var fname = ret.fname;
   var mtype = ret.mtype;
@@ -2899,7 +2899,7 @@ WebcastGameInfoServiceClient.prototype.recv_MAddReward = function() {
     this.input.readMessageEnd();
     throw x;
   }
-  var result = new WebcastGameInfoService_MAddReward_result();
+  var result = new projectGameInfoService_MAddReward_result();
   result.read(this.input);
   this.input.readMessageEnd();
 
@@ -2908,16 +2908,16 @@ WebcastGameInfoServiceClient.prototype.recv_MAddReward = function() {
   }
   throw 'MAddReward failed: unknown result';
 };
-WebcastGameInfoServiceClient.prototype.MDeleteReward = function(req, callback) {
+projectGameInfoServiceClient.prototype.MDeleteReward = function(req, callback) {
   this.send_MDeleteReward(req, callback); 
   if (!callback) {
     return this.recv_MDeleteReward();
   }
 };
 
-WebcastGameInfoServiceClient.prototype.send_MDeleteReward = function(req, callback) {
+projectGameInfoServiceClient.prototype.send_MDeleteReward = function(req, callback) {
   this.output.writeMessageBegin('MDeleteReward', Thrift.MessageType.CALL, this.seqid);
-  var args = new WebcastGameInfoService_MDeleteReward_args();
+  var args = new projectGameInfoService_MDeleteReward_args();
   args.req = req;
   args.write(this.output);
   this.output.writeMessageEnd();
@@ -2937,7 +2937,7 @@ WebcastGameInfoServiceClient.prototype.send_MDeleteReward = function(req, callba
   }
 };
 
-WebcastGameInfoServiceClient.prototype.recv_MDeleteReward = function() {
+projectGameInfoServiceClient.prototype.recv_MDeleteReward = function() {
   var ret = this.input.readMessageBegin();
   var fname = ret.fname;
   var mtype = ret.mtype;
@@ -2948,7 +2948,7 @@ WebcastGameInfoServiceClient.prototype.recv_MDeleteReward = function() {
     this.input.readMessageEnd();
     throw x;
   }
-  var result = new WebcastGameInfoService_MDeleteReward_result();
+  var result = new projectGameInfoService_MDeleteReward_result();
   result.read(this.input);
   this.input.readMessageEnd();
 
@@ -2957,16 +2957,16 @@ WebcastGameInfoServiceClient.prototype.recv_MDeleteReward = function() {
   }
   throw 'MDeleteReward failed: unknown result';
 };
-WebcastGameInfoServiceClient.prototype.MUpdateReward = function(req, callback) {
+projectGameInfoServiceClient.prototype.MUpdateReward = function(req, callback) {
   this.send_MUpdateReward(req, callback); 
   if (!callback) {
     return this.recv_MUpdateReward();
   }
 };
 
-WebcastGameInfoServiceClient.prototype.send_MUpdateReward = function(req, callback) {
+projectGameInfoServiceClient.prototype.send_MUpdateReward = function(req, callback) {
   this.output.writeMessageBegin('MUpdateReward', Thrift.MessageType.CALL, this.seqid);
-  var args = new WebcastGameInfoService_MUpdateReward_args();
+  var args = new projectGameInfoService_MUpdateReward_args();
   args.req = req;
   args.write(this.output);
   this.output.writeMessageEnd();
@@ -2986,7 +2986,7 @@ WebcastGameInfoServiceClient.prototype.send_MUpdateReward = function(req, callba
   }
 };
 
-WebcastGameInfoServiceClient.prototype.recv_MUpdateReward = function() {
+projectGameInfoServiceClient.prototype.recv_MUpdateReward = function() {
   var ret = this.input.readMessageBegin();
   var fname = ret.fname;
   var mtype = ret.mtype;
@@ -2997,7 +2997,7 @@ WebcastGameInfoServiceClient.prototype.recv_MUpdateReward = function() {
     this.input.readMessageEnd();
     throw x;
   }
-  var result = new WebcastGameInfoService_MUpdateReward_result();
+  var result = new projectGameInfoService_MUpdateReward_result();
   result.read(this.input);
   this.input.readMessageEnd();
 
@@ -3006,16 +3006,16 @@ WebcastGameInfoServiceClient.prototype.recv_MUpdateReward = function() {
   }
   throw 'MUpdateReward failed: unknown result';
 };
-WebcastGameInfoServiceClient.prototype.GetReward = function(req, callback) {
+projectGameInfoServiceClient.prototype.GetReward = function(req, callback) {
   this.send_GetReward(req, callback); 
   if (!callback) {
     return this.recv_GetReward();
   }
 };
 
-WebcastGameInfoServiceClient.prototype.send_GetReward = function(req, callback) {
+projectGameInfoServiceClient.prototype.send_GetReward = function(req, callback) {
   this.output.writeMessageBegin('GetReward', Thrift.MessageType.CALL, this.seqid);
-  var args = new WebcastGameInfoService_GetReward_args();
+  var args = new projectGameInfoService_GetReward_args();
   args.req = req;
   args.write(this.output);
   this.output.writeMessageEnd();
@@ -3035,7 +3035,7 @@ WebcastGameInfoServiceClient.prototype.send_GetReward = function(req, callback) 
   }
 };
 
-WebcastGameInfoServiceClient.prototype.recv_GetReward = function() {
+projectGameInfoServiceClient.prototype.recv_GetReward = function() {
   var ret = this.input.readMessageBegin();
   var fname = ret.fname;
   var mtype = ret.mtype;
@@ -3046,7 +3046,7 @@ WebcastGameInfoServiceClient.prototype.recv_GetReward = function() {
     this.input.readMessageEnd();
     throw x;
   }
-  var result = new WebcastGameInfoService_GetReward_result();
+  var result = new projectGameInfoService_GetReward_result();
   result.read(this.input);
   this.input.readMessageEnd();
 
@@ -3055,16 +3055,16 @@ WebcastGameInfoServiceClient.prototype.recv_GetReward = function() {
   }
   throw 'GetReward failed: unknown result';
 };
-WebcastGameInfoServiceClient.prototype.MGetPlaySwitch = function(req, callback) {
+projectGameInfoServiceClient.prototype.MGetPlaySwitch = function(req, callback) {
   this.send_MGetPlaySwitch(req, callback); 
   if (!callback) {
     return this.recv_MGetPlaySwitch();
   }
 };
 
-WebcastGameInfoServiceClient.prototype.send_MGetPlaySwitch = function(req, callback) {
+projectGameInfoServiceClient.prototype.send_MGetPlaySwitch = function(req, callback) {
   this.output.writeMessageBegin('MGetPlaySwitch', Thrift.MessageType.CALL, this.seqid);
-  var args = new WebcastGameInfoService_MGetPlaySwitch_args();
+  var args = new projectGameInfoService_MGetPlaySwitch_args();
   args.req = req;
   args.write(this.output);
   this.output.writeMessageEnd();
@@ -3084,7 +3084,7 @@ WebcastGameInfoServiceClient.prototype.send_MGetPlaySwitch = function(req, callb
   }
 };
 
-WebcastGameInfoServiceClient.prototype.recv_MGetPlaySwitch = function() {
+projectGameInfoServiceClient.prototype.recv_MGetPlaySwitch = function() {
   var ret = this.input.readMessageBegin();
   var fname = ret.fname;
   var mtype = ret.mtype;
@@ -3095,7 +3095,7 @@ WebcastGameInfoServiceClient.prototype.recv_MGetPlaySwitch = function() {
     this.input.readMessageEnd();
     throw x;
   }
-  var result = new WebcastGameInfoService_MGetPlaySwitch_result();
+  var result = new projectGameInfoService_MGetPlaySwitch_result();
   result.read(this.input);
   this.input.readMessageEnd();
 
@@ -3104,16 +3104,16 @@ WebcastGameInfoServiceClient.prototype.recv_MGetPlaySwitch = function() {
   }
   throw 'MGetPlaySwitch failed: unknown result';
 };
-WebcastGameInfoServiceClient.prototype.MUpdatePlaySwitch = function(req, callback) {
+projectGameInfoServiceClient.prototype.MUpdatePlaySwitch = function(req, callback) {
   this.send_MUpdatePlaySwitch(req, callback); 
   if (!callback) {
     return this.recv_MUpdatePlaySwitch();
   }
 };
 
-WebcastGameInfoServiceClient.prototype.send_MUpdatePlaySwitch = function(req, callback) {
+projectGameInfoServiceClient.prototype.send_MUpdatePlaySwitch = function(req, callback) {
   this.output.writeMessageBegin('MUpdatePlaySwitch', Thrift.MessageType.CALL, this.seqid);
-  var args = new WebcastGameInfoService_MUpdatePlaySwitch_args();
+  var args = new projectGameInfoService_MUpdatePlaySwitch_args();
   args.req = req;
   args.write(this.output);
   this.output.writeMessageEnd();
@@ -3133,7 +3133,7 @@ WebcastGameInfoServiceClient.prototype.send_MUpdatePlaySwitch = function(req, ca
   }
 };
 
-WebcastGameInfoServiceClient.prototype.recv_MUpdatePlaySwitch = function() {
+projectGameInfoServiceClient.prototype.recv_MUpdatePlaySwitch = function() {
   var ret = this.input.readMessageBegin();
   var fname = ret.fname;
   var mtype = ret.mtype;
@@ -3144,7 +3144,7 @@ WebcastGameInfoServiceClient.prototype.recv_MUpdatePlaySwitch = function() {
     this.input.readMessageEnd();
     throw x;
   }
-  var result = new WebcastGameInfoService_MUpdatePlaySwitch_result();
+  var result = new projectGameInfoService_MUpdatePlaySwitch_result();
   result.read(this.input);
   this.input.readMessageEnd();
 

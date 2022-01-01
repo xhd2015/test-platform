@@ -220,11 +220,11 @@ export default {
           text: "github",
         },
         {
-          link: "http://cloud-boe.bytedance.net/rds/worksheet/create/boe/webcast_dev_api/alter",
+          link: "http://cloud-boe.sheer.net/rds/worksheet/create/boe/project_dev_api/alter",
           text: "Alter Table(BOE)",
         },
         {
-          link: "https://cloud.bytedance.net/rds/worksheet/create/cn/webcast_dev_api/alter",
+          link: "https://cloud.sheer.net/rds/worksheet/create/cn/project_dev_api/alter",
           text: "Alter Table(CN)",
         },
       ],

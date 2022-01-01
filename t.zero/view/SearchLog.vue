@@ -15,7 +15,7 @@ export default {
   data() {
     return {
       query: "",
-      psm: "webcast.dev.api",
+      psm: "project.dev.api",
       hrefBOE: "",
       hrefOnline: "",
     };
@@ -29,9 +29,9 @@ export default {
 
       const queryParam = encodeURIComponent(this.query);
 
-      this.hrefBOE = `https://cloud-boe.bytedance.net/ms/log/search?dcs=boe&patterns=${queryParam}&psm=${this.psm}&region=boe&tab=keywordSearch&time=${start}%2C${end}`;
+      this.hrefBOE = `https://cloud-boe.sheer.net/ms/log/search?dcs=boe&patterns=${queryParam}&psm=${this.psm}&region=boe&tab=keywordSearch&time=${start}%2C${end}`;
 
-      this.hrefOnline = `https://cloud.bytedance.net/ms/log/search?dcs=lf%2Chl%2Clq&patterns=${queryParam}&psm=${this.psm}&region=cn&tab=keywordSearch&time=${start}%2C${end}`;
+      this.hrefOnline = `https://cloud.sheer.net/ms/log/search?dcs=lf%2Chl%2Clq&patterns=${queryParam}&psm=${this.psm}&region=cn&tab=keywordSearch&time=${start}%2C${end}`;
     },
   },
   computed: {},

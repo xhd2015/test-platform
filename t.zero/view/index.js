@@ -7,6 +7,9 @@ import SearchLog from "./SearchLog.vue"
 import StringConvert from "./StringConvert.vue"
 import TodoList from "./TodoList.vue"
 import FunctionTransfer from "./FunctionTransfer.vue"
+import GRPC from "./GRPC.vue"
+import Messages from "./Messages.vue"
+import Copy from "./Copy.vue"
 
 
 export {
@@ -19,4 +22,7 @@ export {
     StringConvert,
     TodoList,
     FunctionTransfer,
+    GRPC,
+    Messages,
+    Copy,
 }

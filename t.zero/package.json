@@ -6,8 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "bash ./start.sh",
-    "serve": "vue-cli-service serve --mode development",
-    "build": "vue-cli-service build",
+    "build":"npm run generate &>/dev/null;npm run build_may_fail &>/dev/null;npm run generate &>/dev/null;npm run build_may_fail",
+    "serve": "export VUE_APP_API_BASE_URL=http://localhost:8000;npm run generate &>/dev/null;vue-cli-service serve --mode development &>/dev/null & pid=$!;sleep 20;kill -9 $pid;npm run generate &>/dev/null;npm run serve_may_fail",
+    "serve_may_fail": "vue-cli-service serve --mode development",
+    "build_demo": "npm run generate &>/dev/null;VUE_APP_API_BASE_URL=http://localhost:8000 npm run build &>/dev/null;npm run generate &>/dev/null;VUE_APP_API_BASE_URL=http://localhost:8000 npm run build",
+    "build_may_fail": "vue-cli-service build;: 'may fail because intermediate generate,running twice fixes it.'",
+    "build_dev":"npm run generate &>/dev/null;VUE_APP_API_BASE_URL=http://localhost:8000 npm run build_may_fail &>/dev/null;npm run generate &>/dev/null;VUE_APP_API_BASE_URL=http://localhost:8000 npm run build_may_fail",
     "generate": "node generate-lib-es6-to-node.js"
   },
   "author": "xhd2015",
@@ -15,8 +19,8 @@
   "dependencies": {
     "@babel/standalone": "^7.14.7",
     "@folder/xdg": "^3.1.2",
-    "@fultonjs/common": "file:../../fultonjs",
-    "axios": "^0.21.0",
+    "@fultonjs/common": "github:xhd2015/fultonjs",
+    "axios": "^0.21.4",
     "babel-polyfill": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "clipboard": "^2.0.8",

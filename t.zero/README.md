@@ -83,3 +83,7 @@ module.exports = {
 ```
 
 If some icons not loading, use `<link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700\|Material+Icons"/>`
+
+
+# Env
+must starts with `VUE_APP_`, can be accessed through `porcess.env.VUE_APP_*`

@@ -1408,9 +1408,9 @@ RequestInfoV2 = function(args) {
   this.SysRegion = null;
   this.Language = null;
   this.Region = null;
-  this.WebcastSDKVersion = null;
+  this.projectSDKVersion = null;
   this.UserAgent = null;
-  this.WebcastVersionCode = null;
+  this.projectVersionCode = null;
   this.DeviceID = null;
   this.DevicePlatform = null;
   this.DeviceType = null;
@@ -1497,14 +1497,14 @@ RequestInfoV2 = function(args) {
     if (args.Region !== undefined) {
       this.Region = args.Region;
     }
-    if (args.WebcastSDKVersion !== undefined) {
-      this.WebcastSDKVersion = args.WebcastSDKVersion;
+    if (args.projectSDKVersion !== undefined) {
+      this.projectSDKVersion = args.projectSDKVersion;
     }
     if (args.UserAgent !== undefined) {
       this.UserAgent = args.UserAgent;
     }
-    if (args.WebcastVersionCode !== undefined) {
-      this.WebcastVersionCode = args.WebcastVersionCode;
+    if (args.projectVersionCode !== undefined) {
+      this.projectVersionCode = args.projectVersionCode;
     }
     if (args.DeviceID !== undefined) {
       this.DeviceID = args.DeviceID;
@@ -1732,7 +1732,7 @@ RequestInfoV2.prototype.read = function(input) {
       break;
       case 61:
       if (ftype == Thrift.Type.I64) {
-        this.WebcastSDKVersion = input.readI64().value;
+        this.projectSDKVersion = input.readI64().value;
       } else {
         input.skip(ftype);
       }
@@ -1746,7 +1746,7 @@ RequestInfoV2.prototype.read = function(input) {
       break;
       case 63:
       if (ftype == Thrift.Type.I64) {
-        this.WebcastVersionCode = input.readI64().value;
+        this.projectVersionCode = input.readI64().value;
       } else {
         input.skip(ftype);
       }
@@ -1973,9 +1973,9 @@ RequestInfoV2.prototype.write = function(output) {
     output.writeString(this.Region);
     output.writeFieldEnd();
   }
-  if (this.WebcastSDKVersion !== null && this.WebcastSDKVersion !== undefined) {
-    output.writeFieldBegin('WebcastSDKVersion', Thrift.Type.I64, 61);
-    output.writeI64(this.WebcastSDKVersion);
+  if (this.projectSDKVersion !== null && this.projectSDKVersion !== undefined) {
+    output.writeFieldBegin('projectSDKVersion', Thrift.Type.I64, 61);
+    output.writeI64(this.projectSDKVersion);
     output.writeFieldEnd();
   }
   if (this.UserAgent !== null && this.UserAgent !== undefined) {
@@ -1983,9 +1983,9 @@ RequestInfoV2.prototype.write = function(output) {
     output.writeString(this.UserAgent);
     output.writeFieldEnd();
   }
-  if (this.WebcastVersionCode !== null && this.WebcastVersionCode !== undefined) {
-    output.writeFieldBegin('WebcastVersionCode', Thrift.Type.I64, 63);
-    output.writeI64(this.WebcastVersionCode);
+  if (this.projectVersionCode !== null && this.projectVersionCode !== undefined) {
+    output.writeFieldBegin('projectVersionCode', Thrift.Type.I64, 63);
+    output.writeI64(this.projectVersionCode);
     output.writeFieldEnd();
   }
   if (this.DeviceID !== null && this.DeviceID !== undefined) {

@@ -38,6 +38,10 @@ export default {
       description: "is it possible to be json",
     },
     hideJsonFilter: {},
+    hideCommonOptions: {
+      // type:Boolean
+      description: "whether hide common options",
+    },
     pureJson: {
       // type:Boolean,
       description:
@@ -53,13 +57,13 @@ export default {
     },
     autoGrow: { description: "result area auto grow" },
     outlined: {
-      default:true,
+      default: true,
       description: "show outline",
     },
-    label:{
-      type:String,
-      description:"label"
-    }
+    label: {
+      type: String,
+      description: "label",
+    },
   },
   data() {
     return {
@@ -96,7 +100,7 @@ export default {
       }
       this.cachedText = this.filteredText;
 
-      // shit on this: wasted my time to diagnose why the 
+      // shit on this: wasted my time to diagnose why the
       // textarea grow inside but will stack on others.
       // updateTextareaHeight(area.$el);
     },
@@ -244,11 +248,9 @@ export default {
       this.debouncedUpdateArea();
     },
   },
-  updated() {
-  },
+  updated() {},
 
-  mounted() {
-  },
+  mounted() {},
   beforeDestroy() {},
   render() {
     return (
@@ -306,32 +308,34 @@ export default {
 
           // <input type="checkbox" /><label>Unwrap String as JSON</label>
         ]}
-        <VRow>
-          <VCol cols="3" class="pt-0">
-            <VCheckbox
-              inputValue={this.showKeys}
-              onChange={(checked) => {
-                if (checked) {
-                  this.compress = true;
-                } else {
-                  this.compress = false;
-                }
-                this.showKeys = checked;
-              }}
-              label="Show Keys"
-              class="pt-0"
-              hideDetails
-            />
-          </VCol>
-          <VCol cols="3" class="pt-0">
-            <VCheckbox
-              hideDetails
-              vModel={this.compress}
-              label="Compress"
-              class="pt-0"
-            />
-          </VCol>
-        </VRow>
+        {!this.hideCommonOptions && (
+          <VRow>
+            <VCol cols="3" class="pt-0" style={{ display: "flex" }}>
+              <VCheckbox
+                inputValue={this.showKeys}
+                onChange={(checked) => {
+                  if (checked) {
+                    this.compress = true;
+                  } else {
+                    this.compress = false;
+                  }
+                  this.showKeys = checked;
+                }}
+                label="Show Keys"
+                class="pt-0"
+                hideDetails
+              />
+            </VCol>
+            <VCol cols="3" class="pt-0">
+              <VCheckbox
+                hideDetails
+                vModel={this.compress}
+                label="Compress"
+                class="pt-0"
+              />
+            </VCol>
+          </VRow>
+        )}
         <VRow>
           <VCol cols="12" class="pt-0">
             <VTextarea
