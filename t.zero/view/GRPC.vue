@@ -25,6 +25,7 @@ import {
   VSwitch,
   VSnackbar,
   VTooltip,
+  VCombobox,
 } from "vuetify/lib/components";
 
 export default {
@@ -40,9 +41,9 @@ export default {
       service: config.grpc.defaultService,
       endpoints: [],
       endpoint: "", // ip:port
+      endpointsLoading: false,
       strictParse: false,
       log: "",
-      refreshing: false,
       requestDoing: false,
       request: "",
       response: null,
@@ -53,6 +54,7 @@ export default {
       protoService: "",
       protoMethods: [],
       protoMethod: "",
+      protoLoading: false,
       parsedServices: {},
       showAdancedOptions: false,
       showConsole: false,
@@ -61,21 +63,9 @@ export default {
 
   methods: {
     // describe the target, not the source
-    updateParsedLog() {
-      this.parseError = "";
-      if (!this.strictParse) {
-        this.parsedLog = logParseUtils.tryParseAll(this.log);
-        return;
-      }
-      try {
-        this.parsedLog = logParseUtils.parseOne(this.log);
-      } catch (e) {
-        this.parseError = e.message;
-      }
-    },
     // above is depercated
     async updateEndpoints() {
-      this.refreshing = true;
+      this.endpointsLoading = true;
       this.endpoints = [];
       this.endpoint = "";
       this.endpoints = await api
@@ -85,7 +75,7 @@ export default {
           service: this.service,
         })
         .finally(() => {
-          this.refreshing = false;
+          this.endpointsLoading = false;
         });
       // reset endpoint
       this.endpoint = this.endpoints?.[0] || "";
@@ -100,11 +90,14 @@ export default {
         if (!path) {
           throw new Error("no path");
         }
-        const protoServices = await api.listProtoServices({
-          repo: this.protobufSrc,
-          branch: this.branch,
-          path: path,
-        });
+        this.protoLoading = true;
+        const protoServices = await api
+          .listProtoServices({
+            repo: this.protobufSrc,
+            branch: this.branch,
+            path: path,
+          })
+          .finally(() => (this.protoLoading = false));
         this.parsedServices = protoServices;
         this.protoServices = Object.keys(protoServices);
         this.protoService = this.protoServices?.[0] || "";
@@ -173,7 +166,6 @@ export default {
         });
     },
     clickRefreshEndpoint() {
-      this.refreshing = true;
       Promise.all([
         this.debounceUpdateEndpoints(),
         this.debounceUpdateProtoServices()
@@ -184,18 +176,22 @@ export default {
             await this.updateRequest();
           }),
         new Promise((resolve) => setTimeout(resolve, 1000)) /* at least 1s*/,
-      ]).finally(() => {
-        this.refreshing = false;
-      });
+      ]);
     },
     clickConsoleEndpoint() {
       copy.showCopy(this.loginCommand, { timeout: 5 * 1000 });
     },
+    updateProtobufSrc() {
+      if (this.protobufSrcType === config.grpc.defaultOption) {
+        this.protobufSrc =
+          config.grpc.sourceMapping[this.service] || config.grpc.defaultSource;
+      }
+    },
   },
 
   computed: {
-    result() {
-      return this.$refs.result.getCurrentText();
+    loading() {
+      return this.endpointsLoading || this.protoLoading;
     },
     requestDisabled() {
       return !(
@@ -208,7 +204,14 @@ export default {
       );
     },
     consoleDisabled() {
-      return !(this.region && this.env && this.service && this.endpoint);
+      return !(
+        this.region &&
+        this.env &&
+        this.service &&
+        this.endpoint &&
+        !this.endpoint?.startsWith("localhost") &&
+        !this.endpoint.startsWith("127.0.0.1")
+      );
     },
     fileDisabled() {
       return !this.fileLink;
@@ -229,19 +232,14 @@ export default {
     },
   },
   watch: {
-    log() {
-      this.debounceUpdateParsedLog();
-    },
-    strictParse() {
-      this.debounceUpdateParsedLog();
-    },
     env() {
       this.debounceUpdateEndpoints();
     },
     region() {
       this.debounceUpdateEndpoints();
     },
-    service: function () {
+    service() {
+      this.updateProtobufSrc();
       this.debounceUpdateEndpoints();
       this.debounceUpdateProtoServices();
     },
@@ -252,10 +250,12 @@ export default {
       // when protoMethod gets changed, reload request
       this.updateRequest();
     },
+    protobufSrcType() {
+      this.updateProtobufSrc();
+    },
   },
 
   created: function () {
-    this.debounceUpdateParsedLog = lodash.debounce(this.updateParsedLog, 200);
     this.debounceUpdateEndpoints = lodash.debounce(this.updateEndpoints, 200);
     this.debounceUpdateProtoServices = lodash.debounce(
       this.updateProtoServices,
@@ -266,6 +266,7 @@ export default {
     // immediately call
     this.debounceUpdateEndpoints();
     this.debounceUpdateProtoServices();
+    this.updateProtobufSrc();
   },
   mounted() {
     this.debounceUpdateEndpoints();
@@ -298,14 +299,10 @@ export default {
           </VCol>
 
           <VCol cols="4">
-            {
-              // TODO: goto terminal
-            }
-
-            <VSelect
+            <VCombobox
               label="Endpoint"
               vModel={this.endpoint}
-              items={this.endpoints}
+              items={[...this.endpoints, "localhost:15000"]}
             />
           </VCol>
 
@@ -325,7 +322,7 @@ export default {
                       on={on}
                       small
                       outlined
-                      loading={this.refreshing}
+                      loading={this.loading}
                     >
                       <VIcon small>mdi-refresh</VIcon>
                     </VBtn>
@@ -497,4 +494,7 @@ export default {
 </script>
 
 <style scoped>
+.col {
+  padding-left: 0;
+}
 </style>

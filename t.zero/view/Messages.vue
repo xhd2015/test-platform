@@ -11,7 +11,9 @@ export default {
   props: {},
   data() {
     return {
-      messages: [],
+      message: null,
+      queue: [], // message to be shown
+      //   messages: [],
     };
   },
   computed: {},
@@ -37,24 +39,27 @@ export default {
       if (!message) {
         return;
       }
-      this.messages.push({ message, ...options });
-    },
-    messageDismiss(model) {
-      let idx = this.messages.indexOf(model);
-      if (idx !== -1) {
-        this.messages.splice(idx, 1);
+      if (!this.message) {
+        this.message = { message, ...options };
+        return;
       }
+      this.queue.push({ message, ...options });
+    },
+    next() {
+      this.message = null;
+      setTimeout(() => {
+        if (this.queue.length > 0) {
+          this.message = this.queue.splice(0, 1)[0];
+        }
+      }, 100);
     },
   },
   render() {
     return (
       <VContainer>
-        {this.messages?.map((model) => (
-          <Message
-            {...{ attrs: model }}
-            onDismiss={() => this.messageDismiss(model)}
-          />
-        ))}
+        {this.message && (
+          <Message {...{ attrs: this.message }} onDismiss={() => this.next()} />
+        )}
       </VContainer>
     );
   },

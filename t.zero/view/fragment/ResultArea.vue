@@ -64,6 +64,10 @@ export default {
       type: String,
       description: "label",
     },
+    rows: {
+      type: Number,
+      description: "initial rows",
+    },
   },
   data() {
     return {
@@ -346,6 +350,7 @@ export default {
               error={this.hasError}
               autoGrow={!!this.autoGrow}
               label={this.label}
+              rows={this.rows}
             ></VTextarea>
           </VCol>
         </VRow>

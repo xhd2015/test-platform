@@ -132,4 +132,7 @@ export default {
 </script>
 
 <style scoped>
+.col {
+  padding-left: 0;
+}
 </style>

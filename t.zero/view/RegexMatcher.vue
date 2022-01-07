@@ -44,7 +44,7 @@ export default {
   name: "RegexMatcher",
   data() {
     return {
-      regex: "",
+      regex: ".*",
       tests: "",
       result: "",
       matches: false,
@@ -113,8 +113,8 @@ export default {
 
     return (
       <div>
+        <VTextarea  outlined vModel={this.tests} label="Text" />
         <VTextarea  outlined vModel={this.regex} label="Regex" />
-        <VTextarea  outlined vModel={this.tests} label="Tests" />
 
         <div style="display: flex">
           <VCheckbox label="Show Match" vModel={this.enableMatch} />

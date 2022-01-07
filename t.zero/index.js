@@ -44,32 +44,32 @@ if (typeof window.perf === 'undefined') {
   window.perf = new PerfV1_2()
 
   // dead code
-//   const cfgVersion = localStorage.getItem("configVersion")
-//   if (cfgVersion === '1.0' || cfgVersion === '' || cfgVersion == null) {
-//     // 1.0 or empty
-//     // upgrade
-//     const cfgValuev1_0 = localStorage.getItem("config")
-//     const configv1_0 = cfgValuev1_0 ? JSON.parse(cfgValuev1_0) : {}
+  //   const cfgVersion = localStorage.getItem("configVersion")
+  //   if (cfgVersion === '1.0' || cfgVersion === '' || cfgVersion == null) {
+  //     // 1.0 or empty
+  //     // upgrade
+  //     const cfgValuev1_0 = localStorage.getItem("config")
+  //     const configv1_0 = cfgValuev1_0 ? JSON.parse(cfgValuev1_0) : {}
 
-//     const { clipboardItems, todoListItems } = configv1_0 || {}
-//     for (let item of clipboardItems) {
-//       const id = window.idgen.get()
-//       item.id = id
-//       window.perf.set("clipboardItems", id, item)
-//     }
-//     for (let item of todoListItems) {
-//       const id = window.idgen.get()
-//       item.id = id
-//       window.perf.set("todoListItems", id, item)
-//     }
-//     localStorage.setItem("configVersion", "1.2")
-//   } else if (cfgVersion === '1.1') {
-//     // nothing to upgrade
-//     localStorage.setItem("configVersion", "1.2")
-//   } else if (cfgVersion !== '1.2') {
-//     // cannot handler other config version
-//     console.warn("config version not supported:", cfgVersion, ", supported list:[1.0,1.1]")
-//   }
+  //     const { clipboardItems, todoListItems } = configv1_0 || {}
+  //     for (let item of clipboardItems) {
+  //       const id = window.idgen.get()
+  //       item.id = id
+  //       window.perf.set("clipboardItems", id, item)
+  //     }
+  //     for (let item of todoListItems) {
+  //       const id = window.idgen.get()
+  //       item.id = id
+  //       window.perf.set("todoListItems", id, item)
+  //     }
+  //     localStorage.setItem("configVersion", "1.2")
+  //   } else if (cfgVersion === '1.1') {
+  //     // nothing to upgrade
+  //     localStorage.setItem("configVersion", "1.2")
+  //   } else if (cfgVersion !== '1.2') {
+  //     // cannot handler other config version
+  //     console.warn("config version not supported:", cfgVersion, ", supported list:[1.0,1.1]")
+  //   }
 }
 
 
@@ -175,10 +175,13 @@ let rootVue = new Vue({
   watch: {
     '$route': {
       deep: true,
-      immediate: false, // skip initial route setup
+      immediate: true, // skip initial route setup
       handler(v) { // v:{fullPathl,hash, path,params,query}
         console.log("route changed:", v)
-        perf.set('fullPath', v.fullPath)
+        // perf.set('fullPath', v.fullPath)
+        if (v.name) {
+          document.title = `${v.name} - Test Platform`
+        }
       }
     }
   },

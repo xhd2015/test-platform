@@ -21,6 +21,7 @@ import {
 } from "vuetify/lib/components";
 
 import { routes } from "./router";
+import nav from "./nav";
 import { Header, NavList, Footer } from "./view/main-frame";
 import { Messages, Copy } from "./view";
 
@@ -64,28 +65,24 @@ export default {
     return (
       <VApp class="grey lighten-4">
         <Header />
-
+        {
+          // global supporting components
+        }
         <Messages ref="messages" />
         <Copy ref="copy" />
+
+        {
+          // main
+        }
         <VMain style={{ display: "flex" }} app>
           <VRow>
             <VCol cols="2">
               <VList>
-                <VListItem>
-                  <router-link to="/json">JSON Tool</router-link>
-                </VListItem>
-                <VListItem>
-                  <router-link to="/log/parser">Log Parser</router-link>
-                </VListItem>
-                <VListItem>
-                  <router-link to="/regex/matcher">Regex Matcher</router-link>
-                </VListItem>
-                <VListItem>
-                  <router-link to="/string/conv">String Converter</router-link>
-                </VListItem>
-                <VListItem>
-                  <router-link to="/grpc">GRPC</router-link>
-                </VListItem>
+                {nav.map((e) => (
+                  <VListItem key={e.path}>
+                    <router-link to={e.path}>{e.text}</router-link>
+                  </VListItem>
+                ))}
               </VList>
             </VCol>
             <VCol cols="8" class="mt-2">

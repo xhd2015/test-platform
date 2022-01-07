@@ -95,21 +95,24 @@ export default {
         text
         centered
         style={{ zIndex: 10 }}
-        scopedSlots={{
-          ...(this.close && {
-            action: (attrs) => (
-              <VBtn
-                {...{ attrs }}
-                color="pink"
-                text
-                onClick={() => {
-                  this.show = false;
-                }}
-              >
-                Close
-              </VBtn>
-            ),
-          }),
+        {...{
+          scopedSlots: {
+            ...(this.close && {
+              action: (attrs) => (
+                <VBtn
+                  {...{ attrs }}
+                  color="pink"
+                  outlined
+                  small
+                  onClick={() => {
+                    this.show = false;
+                  }}
+                >
+                  close
+                </VBtn>
+              ),
+            }),
+          },
         }}
       >
         <div class="d-flex justify-start align-center">
@@ -129,4 +132,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+/* .message-transition{
+     transition: all 2s ease;
+} */
 </style>

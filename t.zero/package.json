@@ -6,10 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "bash ./start.sh",
-    "build":"npm run generate &>/dev/null;npm run build_may_fail &>/dev/null;npm run generate &>/dev/null;npm run build_may_fail",
-    "serve": "export VUE_APP_API_BASE_URL=http://localhost:8000;npm run generate &>/dev/null;vue-cli-service serve --mode development &>/dev/null & pid=$!;sleep 20;kill -9 $pid;npm run generate &>/dev/null;npm run serve_may_fail",
+    "build":"npm run generate &>/dev/null;npm run build_may_fail &>/dev/null;if [ $? != 0 ]; then npm run generate &>/dev/null;npm run build_may_fail;fi",
+    "serve": "export VUE_APP_API_BASE_URL=http://localhost:8000;npm run generate &>/dev/null;vue-cli-service serve --mode development &>/dev/null & pid=$!;sleep 10;kill -9 $pid;npm run generate &>/dev/null;npm run serve_may_fail",
     "serve_may_fail": "vue-cli-service serve --mode development",
-    "build_demo": "npm run generate &>/dev/null;VUE_APP_API_BASE_URL=http://localhost:8000 npm run build &>/dev/null;npm run generate &>/dev/null;VUE_APP_API_BASE_URL=http://localhost:8000 npm run build",
+    "build_demo": "npm run generate &>/dev/null;VUE_APP_API_BASE_URL=http://localhost:8000 npm run build &>/dev/null;[ $? -eq 0 ] && exit;npm run generate &>/dev/null;VUE_APP_API_BASE_URL=http://localhost:8000 npm run build",
     "build_may_fail": "vue-cli-service build;: 'may fail because intermediate generate,running twice fixes it.'",
     "build_dev":"npm run generate &>/dev/null;VUE_APP_API_BASE_URL=http://localhost:8000 npm run build_may_fail &>/dev/null;npm run generate &>/dev/null;VUE_APP_API_BASE_URL=http://localhost:8000 npm run build_may_fail",
     "generate": "node generate-lib-es6-to-node.js"
